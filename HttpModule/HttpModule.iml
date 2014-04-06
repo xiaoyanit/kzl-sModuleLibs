@@ -25,6 +25,8 @@
     <orderEntry type="module" module-name="android-common-master" />
     <orderEntry type="module" module-name="UtilsModule" />
     <orderEntry type="module" module-name="android-common-master" />
+    <orderEntry type="module" module-name="UtilsModule" />
+    <orderEntry type="module" module-name="android-common-master" />
   </component>
 </module>
 

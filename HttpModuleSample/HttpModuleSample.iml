@@ -20,6 +20,8 @@
     <orderEntry type="module" module-name="HttpModule" />
     <orderEntry type="module" module-name="UtilsModule" />
     <orderEntry type="module" module-name="HttpModule" />
+    <orderEntry type="module" module-name="UtilsModule" />
+    <orderEntry type="module" module-name="HttpModule" />
   </component>
 </module>
 
