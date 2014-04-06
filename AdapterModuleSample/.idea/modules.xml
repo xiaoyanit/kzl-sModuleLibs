@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AdapterModule/AdapterModule.iml" filepath="$PROJECT_DIR$/../AdapterModule/AdapterModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AdapterModuleSample.iml" filepath="$PROJECT_DIR$/AdapterModuleSample.iml" />
+    </modules>
+  </component>
+</project>
+

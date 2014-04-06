@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../HttpModule/HttpModule.iml" filepath="$PROJECT_DIR$/../HttpModule/HttpModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpModuleSample.iml" filepath="$PROJECT_DIR$/HttpModuleSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../UtilsModule/UtilsModule.iml" filepath="$PROJECT_DIR$/../UtilsModule/UtilsModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HttpModule/android-common-master/android-common-master.iml" filepath="$PROJECT_DIR$/../HttpModule/android-common-master/android-common-master.iml" />
+    </modules>
+  </component>
+</project>
+
