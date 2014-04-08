@@ -1,0 +1,1 @@
+include ':HttpModuleSample', ':HttpModule', ':UtilsModule', ':android-common-master', ':AdapterModuleSample', ':AdapterModule'
