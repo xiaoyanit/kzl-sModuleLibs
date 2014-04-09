@@ -12,18 +12,19 @@ import android.util.Log;
 public class LogUtil {
     private static final String TAG = "myLog";
     public static final boolean isDebug = true;
+    public static final String NULL = "NULL";
 
     public static void trace(Exception e) {
         if (!isDebug)
             return;
         final String msg = e.getMessage();
-        Log.e(TAG, msg == null ? "" : msg);
+        Log.e(TAG, msg == null ? NULL : msg);
     }
 
     public static void trace(String msg) {
         if (!isDebug)
             return;
-        Log.d(TAG, msg);
+        Log.d(TAG, msg == null ? NULL : msg);
     }
 
 
@@ -37,6 +38,6 @@ public class LogUtil {
         if (!isDebug)
             return;
         final String msg = e.getMessage();
-        Log.e(TAG + tag, msg == null ? "" : msg);
+        Log.e(TAG + tag, msg == null ? NULL : msg);
     }
 }
