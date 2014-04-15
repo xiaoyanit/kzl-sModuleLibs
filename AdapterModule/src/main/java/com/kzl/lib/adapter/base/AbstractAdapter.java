@@ -74,10 +74,10 @@ public abstract class AbstractAdapter<D> extends BaseAdapter {
             convertView = View.inflate(context, getItemViewLayout(type), null);
             holder = getItemViewHolder(type);
             convertView.setTag(holder);
-            ViewInjectorByReflect.injectView(holder, convertView);
         } else {
             holder = (BaseViewHolder<D>) convertView.getTag();
         }
+        ViewInjectorByReflect.injectView(holder, convertView);
         D bean = getItem(position);
 
         holder.setData(bean, position);
