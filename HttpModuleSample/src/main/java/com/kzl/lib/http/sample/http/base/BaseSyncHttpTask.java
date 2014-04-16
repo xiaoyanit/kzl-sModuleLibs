@@ -4,7 +4,9 @@ package com.kzl.lib.http.sample.http.base;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.module.BaseRequest;
 import com.kzl.lib.http.sample.module.BaseResponse;
-import com.kzl.lib.http.task.interfaces.sync.ImplSyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.ISyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.impl.GetImplSyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.impl.PostImplSyncHttpTask;
 
 /**
  * Created by zhenlu .
@@ -15,10 +17,14 @@ import com.kzl.lib.http.task.interfaces.sync.ImplSyncHttpTask;
  * Time: 下午9:49<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class BaseSyncHttpTask<T extends BaseResponse> extends ImplSyncHttpTask {
+public class BaseSyncHttpTask<T extends BaseResponse> {//extends ImplSyncHttpTask {
     private static BaseSyncHttpTask instance;
+    private ISyncHttpTask<T> getSyncHttpTask;
+    private ISyncHttpTask<T> postSyncHttpTask;
 
     private BaseSyncHttpTask() {
+        getSyncHttpTask = new GetImplSyncHttpTask<T>();
+        postSyncHttpTask = new PostImplSyncHttpTask<T>();
     }
 
     public static BaseSyncHttpTask getInstance() {
@@ -30,11 +36,11 @@ public class BaseSyncHttpTask<T extends BaseResponse> extends ImplSyncHttpTask {
 
     @SuppressWarnings("unchecked")
     public T get(BaseRequest request) {
-        return (T) super.get(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        return (T) getSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
 
     @SuppressWarnings("unchecked")
     public T post(BaseRequest request) {
-        return (T) super.post(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        return (T) postSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
 }
