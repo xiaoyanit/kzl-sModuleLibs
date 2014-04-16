@@ -1,7 +1,7 @@
 package com.kzl.lib.http.task.interfaces;
 
 
-import com.kzl.lib.http.task.impl.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.model.EmptyHttpRequest;
 
 /**
  * Created with IntelliJ IDEA.<br/>

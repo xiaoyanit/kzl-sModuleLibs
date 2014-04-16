@@ -1,4 +1,4 @@
-package com.kzl.lib.http.task.impl.callback;
+package com.kzl.lib.http.client.callback;
 
 /**
  * Created by zhenlu on 14-3-27.

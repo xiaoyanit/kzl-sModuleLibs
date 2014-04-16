@@ -1,6 +1,6 @@
 package com.kzl.lib.http.sample.http.base;
 
-import com.kzl.lib.http.task.impl.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.callback.IHttpResponseFilter;
 
 /**
  * Project:HttpModuleSample

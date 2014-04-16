@@ -1,7 +1,7 @@
 package com.kzl.lib.http.task.interfaces.sync;
 
-import com.kzl.lib.http.task.impl.model.EmptyHttpRequest;
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
 import com.kzl.lib.utils.LogUtil;
 
 /**

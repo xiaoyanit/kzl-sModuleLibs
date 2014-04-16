@@ -71,7 +71,6 @@
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HttpModule" exported="" />
-    <orderEntry type="library" exported="" name="gson-2.2.2" level="project" />
   </component>
 </module>
 

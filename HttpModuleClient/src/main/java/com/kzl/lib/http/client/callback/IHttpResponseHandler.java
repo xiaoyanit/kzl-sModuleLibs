@@ -1,7 +1,7 @@
-package com.kzl.lib.http.task.impl.callback;
+package com.kzl.lib.http.client.callback;
 
 
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
 
 /**
  * Created with IntelliJ IDEA.<br/>

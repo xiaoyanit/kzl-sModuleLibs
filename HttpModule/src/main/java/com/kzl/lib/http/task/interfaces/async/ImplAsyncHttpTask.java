@@ -1,14 +1,15 @@
 package com.kzl.lib.http.task.interfaces.async;
 
 import android.content.Context;
-import com.kzl.lib.http.task.impl.AsyncHttpClient;
-import com.kzl.lib.http.task.impl.callback.IAsyncHttpResponseHandler;
-import com.kzl.lib.http.task.impl.callback.IHttpResponseFilter;
-import com.kzl.lib.http.task.impl.callback.IHttpResponseHandler;
-import com.kzl.lib.http.task.impl.model.EmptyHttpRequest;
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
-import com.kzl.lib.http.task.impl.utils.HttpCommonUtil;
-import com.kzl.lib.http.task.impl.utils.HttpResponseMapper;
+
+import com.kzl.lib.http.client.AsyncHttpClient;
+import com.kzl.lib.http.client.callback.IAsyncHttpResponseHandler;
+import com.kzl.lib.http.client.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.utils.HttpCommonUtil;
+import com.kzl.lib.http.client.utils.HttpResponseMapper;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 

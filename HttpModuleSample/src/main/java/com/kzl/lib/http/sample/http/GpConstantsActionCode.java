@@ -1,9 +1,9 @@
 package com.kzl.lib.http.sample.http;
 
 import com.kzl.lib.http.sample.module.response.LoginResponse;
-import com.kzl.lib.http.task.impl.utils.HttpResponseMapper;
+import com.kzl.lib.http.client.utils.HttpResponseMapper;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
 
 import java.util.HashMap;
 import java.util.Map;

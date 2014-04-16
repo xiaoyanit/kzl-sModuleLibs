@@ -1,9 +1,9 @@
 package com.kzl.lib.http.task.interfaces.sync;
 
-import com.kzl.lib.http.task.impl.callback.IHttpResponseFilter;
-import com.kzl.lib.http.task.impl.model.EmptyHttpRequest;
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
-import com.kzl.lib.http.task.impl.utils.HttpResponseMapper;
+import com.kzl.lib.http.client.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.utils.HttpResponseMapper;
 
 /**
  * Created by Administrator on 14-4-15.

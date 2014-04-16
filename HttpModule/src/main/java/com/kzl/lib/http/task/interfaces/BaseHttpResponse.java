@@ -1,6 +1,7 @@
 package com.kzl.lib.http.task.interfaces;
 
-import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
+
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
 
 /**
  * Created with IntelliJ IDEA.<br/>
@@ -9,7 +10,7 @@ import com.kzl.lib.http.task.impl.model.EmptyHttpResponse;
  * Time: 下午5:30<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class BaseHttpResponse extends EmptyHttpResponse{
+public class BaseHttpResponse extends EmptyHttpResponse {
     private String resultCode;
     private String errorInfo;
     private String actionCode;
