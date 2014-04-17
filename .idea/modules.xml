@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AdapterModule/AdapterModule.iml" filepath="$PROJECT_DIR$/AdapterModule/AdapterModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdapterModuleSample/AdapterModuleSample.iml" filepath="$PROJECT_DIR$/AdapterModuleSample/AdapterModuleSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HttpModule/HttpModule.iml" filepath="$PROJECT_DIR$/HttpModule/HttpModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpModuleClient/HttpModuleClient.iml" filepath="$PROJECT_DIR$/HttpModuleClient/HttpModuleClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpModuleInterfaces/HttpModuleInterfaces.iml" filepath="$PROJECT_DIR$/HttpModuleInterfaces/HttpModuleInterfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpModuleSample/HttpModuleSample.iml" filepath="$PROJECT_DIR$/HttpModuleSample/HttpModuleSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/UtilsModule/UtilsModule.iml" filepath="$PROJECT_DIR$/UtilsModule/UtilsModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-common-master/android-common-master.iml" filepath="$PROJECT_DIR$/android-common-master/android-common-master.iml" />

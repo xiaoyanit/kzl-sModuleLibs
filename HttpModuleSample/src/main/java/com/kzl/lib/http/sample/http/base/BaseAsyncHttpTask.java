@@ -1,7 +1,8 @@
 package com.kzl.lib.http.sample.http.base;
 
 import android.content.Context;
-import com.kzl.lib.http.R;
+
+import com.kzl.lib.http.sample.R;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.task.interfaces.async.ImplAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;

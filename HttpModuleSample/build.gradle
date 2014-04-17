@@ -19,5 +19,5 @@ android {
 }
 
 dependencies {
-    compile project(':HttpModule')
+    compile project(':HttpModuleInterfaces')
 }

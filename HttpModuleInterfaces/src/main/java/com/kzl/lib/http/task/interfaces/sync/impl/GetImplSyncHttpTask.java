@@ -1,9 +1,9 @@
 package com.kzl.lib.http.task.interfaces.sync.impl;
 
 import com.kzl.lib.http.client.SyncHttpClient;
-import com.kzl.lib.http.client.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.client.utils.HttpResponseMapper;
 import com.kzl.lib.http.task.interfaces.sync.ISyncHttpTask;

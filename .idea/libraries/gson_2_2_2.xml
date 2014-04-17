@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="gson-2.2.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/HttpModuleSample/build/exploded-bundles/KzlSModuleLibsHttpModuleUnspecified.aar/libs/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HttpModuleClient/src/main/libs/gson-2.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
