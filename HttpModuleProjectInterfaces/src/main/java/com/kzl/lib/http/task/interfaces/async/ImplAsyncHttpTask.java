@@ -1,7 +1,6 @@
 package com.kzl.lib.http.task.interfaces.async;
 
 import android.content.Context;
-
 import com.kzl.lib.http.client.interfaces.IAsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
@@ -18,44 +17,41 @@ import com.kzl.lib.utils.Utils;
  * Created by kzl on 14-3-19.
  * 直接继承EmptyHttResponse则直接调用onNormal，onError将不会被调用
  */
-public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpResponseHandler<T>, IAsyncHttpTask {
+public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpTask {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     protected Context context;
     private IAsyncHttpClient asyncHttpClient;
+    private IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler;
     private long start;
-    @SuppressWarnings("unchecked")
-    public final IHttpResponseHandler handler = new IHttpResponseHandler() {
+    public final IHttpResponseHandler<T> handler = new IHttpResponseHandler<T>() {
 
         @Override
-        public void onFinish(EmptyHttpResponse response) {
+        public void onFinish(T response) {
             long end = System.currentTimeMillis();
             LogUtil.trace(LOG_TAG + "  start-end ==" + (end - start));
             if (response == null) {
-                onNoData();
+                iAsyncHttpResponseHandler.onNoData();
             } else {
-                onSuccess((T) response);
+                iAsyncHttpResponseHandler.onSuccess(response);
             }
-            ImplAsyncHttpTask.this.onFinish();
+            iAsyncHttpResponseHandler.onFinish();
         }
     };
 
-    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient) {
+    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
         this.context = context;
         this.asyncHttpClient = asyncHttpClient;
-    }
-
-    public ImplAsyncHttpTask(Context context) {
-        this.context = context;
+        this.iAsyncHttpResponseHandler = iAsyncHttpResponseHandler;
     }
 
     public void filter(final String url, final EmptyHttpRequest request, final IHttpExecutor executor) {
         LogUtil.trace(LOG_TAG, "json-request:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
-            onNoNet();
+            iAsyncHttpResponseHandler.onNoNet();
             return;
         }
-        onStart();
+        iAsyncHttpResponseHandler.onStart();
         start = System.currentTimeMillis();
         executor.execute();
     }
@@ -70,29 +66,6 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         });
     }
 
-    @Override
-    public void onStart() {
-    }
-
-    @Override
-    public void onFinish() {
-    }
-
-    @Override
-    public void onSuccess(T response) {
-    }
-
-    @Override
-    public void onNoNet() {
-    }
-
-    @Override
-    public void onNoData() {
-    }
-
-    public void setAsyncHttpClient(IAsyncHttpClient asyncHttpClient) {
-        this.asyncHttpClient = asyncHttpClient;
-    }
 
     public IAsyncHttpClient getAsyncHttpClient() {
         return asyncHttpClient;

@@ -32,7 +32,7 @@ public class HttpCommonUtil {
      * @param handler
      * @param <T>
      */
-    public static <T extends EmptyHttpResponse> T onFinish(HttpResponse response, final Class<T> classOfT, final IHttpResponseHandler handler, final IHttpResponseFilter filter) {
+    public static <T extends EmptyHttpResponse> T onFinish(HttpResponse response, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
         if (response == null || response.getResponseBody() == null) {
             LogUtil.trace(LOG_TAG, "connect fail onPostExecute");
             return null;

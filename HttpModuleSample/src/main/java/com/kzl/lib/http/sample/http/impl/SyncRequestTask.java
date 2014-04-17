@@ -1,7 +1,7 @@
 package com.kzl.lib.http.sample.http.impl;
 
 
-import com.kzl.lib.http.sample.http.base.BaseSyncHttpTask;
+import com.kzl.lib.http.sample.http.base.sync.BaseSyncHttpTask;
 import com.kzl.lib.http.sample.module.request.LoginRequest;
 import com.kzl.lib.http.sample.module.response.LoginResponse;
 

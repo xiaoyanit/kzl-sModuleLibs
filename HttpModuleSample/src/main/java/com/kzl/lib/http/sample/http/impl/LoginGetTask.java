@@ -2,9 +2,7 @@ package com.kzl.lib.http.sample.http.impl;
 
 
 import android.content.Context;
-
-import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
-import com.kzl.lib.http.sample.http.base.BaseGetAsyncHttpTask;
+import com.kzl.lib.http.sample.http.base.async.impl.ImplBaseGetAsyncHttpTask;
 import com.kzl.lib.http.sample.module.request.LoginRequest;
 import com.kzl.lib.http.sample.module.response.LoginResponse;
 import com.kzl.lib.utils.LogUtil;
@@ -16,20 +14,19 @@ import com.kzl.lib.utils.LogUtil;
  * Time: 下午2:53<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class LoginTask extends BaseGetAsyncHttpTask<LoginResponse> {
+public class LoginGetTask<T extends LoginResponse> extends ImplBaseGetAsyncHttpTask<T> {
 
-    public LoginTask(Context context) {
+    public LoginGetTask(Context context) {
         super(context);
     }
 
     //登录
     public void send(final String account, final String md5Password) {
-        super.executeGet(new LoginRequest(account, md5Password));
-//        super.executePost(new LoginRequest(account, md5Password));
+        super.execute(new LoginRequest(account, md5Password));
     }
 
     @Override
-    public void onSuccess(EmptyHttpResponse response) {
+    public void onSuccess(T response) {
         super.onSuccess(response);
     }
 
@@ -39,7 +36,7 @@ public class LoginTask extends BaseGetAsyncHttpTask<LoginResponse> {
     }
 
     @Override
-    public void onNormal(LoginResponse response) {
+    public void onNormal(T response) {
         super.onNormal(response);
         LogUtil.trace("response==" + response.toString());
     }

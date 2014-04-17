@@ -10,11 +10,11 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
  * Time: 下午3:05<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IHttpResponseHandler {
+public interface IHttpResponseHandler<T extends EmptyHttpResponse>  {
     /**
      * do when you baseGet the http response
      *
      * @param response
      */
-    public<T extends EmptyHttpResponse> void onFinish(T response);
+    public void onFinish(T response);
 }

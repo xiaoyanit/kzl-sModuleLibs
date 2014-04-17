@@ -18,7 +18,7 @@ import java.util.Map;
 */
 public class GpConstantsActionCode extends HttpResponseMapper {
     private final static Map<String, Class<? extends BaseHttpResponse>> CLASS_MAP = new HashMap<String, Class<? extends BaseHttpResponse>>();
-    public final static String HOST = "";
+    public final static String HOST = "";//TODO 添加主机url
     public final static String RES_OK = "0";
     public static final String LOGIN_ACTION = "login.action";
     private static final GpConstantsActionCode instance =  new GpConstantsActionCode();
