@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.async;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.impl.AsyncHttpClient;
+import com.kzl.lib.http.client.interfaces.IAsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
@@ -10,6 +10,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
+import com.kzl.lib.http.task.interfaces.GPConstantValues;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
@@ -17,12 +18,13 @@ import com.kzl.lib.utils.Utils;
  * Created by kzl on 14-3-19.
  * 直接继承EmptyHttResponse则直接调用onNormal，onError将不会被调用
  */
-public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpResponseHandler<T> {
-    private final static String LOG_TAG = "HTTPUtil";
+public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpResponseHandler<T>, IAsyncHttpTask {
+    private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     protected Context context;
+    private IAsyncHttpClient asyncHttpClient;
     private long start;
     @SuppressWarnings("unchecked")
-    private final IHttpResponseHandler handler = new IHttpResponseHandler() {
+    public final IHttpResponseHandler handler = new IHttpResponseHandler() {
 
         @Override
         public void onFinish(EmptyHttpResponse response) {
@@ -37,11 +39,16 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         }
     };
 
+    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient) {
+        this.context = context;
+        this.asyncHttpClient = asyncHttpClient;
+    }
+
     public ImplAsyncHttpTask(Context context) {
         this.context = context;
     }
 
-    private void filter(final String url, final EmptyHttpRequest request, final IHttpExecutor executor) {
+    public void filter(final String url, final EmptyHttpRequest request, final IHttpExecutor executor) {
         LogUtil.trace(LOG_TAG, "json-request:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
@@ -53,27 +60,15 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         executor.execute();
     }
 
-    @SuppressWarnings("unchecked")
-    protected void baseGet(final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
-
-        this.filter(url,request,new IHttpExecutor() {
+    @Override
+    public void execute(final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
+        filter(url, request, new IHttpExecutor() {
             @Override
             public void execute() {
-                AsyncHttpClient.get(url, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
+                getAsyncHttpClient().execute(url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
             }
         });
     }
-
-    @SuppressWarnings("unchecked")
-    protected void basePost(final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
-        this.filter(url,request,new IHttpExecutor() {
-            @Override
-            public void execute() {
-                AsyncHttpClient.post(url, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
-            }
-        });
-    }
-
 
     @Override
     public void onStart() {
@@ -95,4 +90,11 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     public void onNoData() {
     }
 
+    public void setAsyncHttpClient(IAsyncHttpClient asyncHttpClient) {
+        this.asyncHttpClient = asyncHttpClient;
+    }
+
+    public IAsyncHttpClient getAsyncHttpClient() {
+        return asyncHttpClient;
+    }
 }

@@ -12,10 +12,19 @@ import cn.trinea.android.common.util.HttpUtils;
 /**
  * Created by Administrator on 14-4-17.
  */
-public class PostSyncHttpClient implements ISyncHttpClient {
+public class GetImplSyncHttpClient implements ISyncHttpClient {
+    /**
+     *
+     * @param requestUrl
+     * @param request
+     * @param classOfT
+     * @param filter
+     * @param <T>
+     * @return
+     */
     @Override
     public <T extends EmptyHttpResponse> T execute(String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
-        HttpResponse response = HttpUtils.httpPost(requestUrl);
+        HttpResponse response = HttpUtils.httpGet(requestUrl);
         return HttpCommonUtil.onFinish(response, classOfT, null, filter);
     }
 }

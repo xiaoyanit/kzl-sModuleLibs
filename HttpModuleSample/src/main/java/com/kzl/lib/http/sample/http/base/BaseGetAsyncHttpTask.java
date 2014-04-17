@@ -2,9 +2,12 @@ package com.kzl.lib.http.sample.http.base;
 
 import android.content.Context;
 
+import com.kzl.lib.http.client.impl.async.GetImplAsyncHttpClient;
+import com.kzl.lib.http.client.impl.async.PostImplAsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.sample.R;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
+import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.async.ImplAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
@@ -14,17 +17,18 @@ import com.kzl.lib.utils.ToastUtil;
 /**
  * Created by kzl on 14-3-19.
  */
-public class BaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpTask implements IAsyncHttpResponseSuccessHandler<T> {
-    public BaseAsyncHttpTask(Context context) {
-        super(context);
+public class BaseGetAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpTask implements IAsyncHttpResponseSuccessHandler<T> {
+    public BaseGetAsyncHttpTask(Context context) {
+        super(context,new GetImplAsyncHttpClient());
+//        super(context,new PostImplAsyncHttpClient());
     }
 
     public void executeGet(final BaseHttpRequest request) {
-        super.baseGet(HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        super.execute(HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
-    public void executePost(final BaseHttpRequest request) {
-        super.basePost(HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
-    }
+//    public void executePost(final BaseHttpRequest request) {
+//        super.basePost(HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+//    }
 
     @Override
     @SuppressWarnings("unchecked")

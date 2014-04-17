@@ -1,6 +1,6 @@
 package com.kzl.lib.http.task.interfaces.sync.impl;
 
-import com.kzl.lib.http.client.impl.sync.PostSyncHttpClient;
+import com.kzl.lib.http.client.impl.sync.PostImplSyncHttpClient;
 import com.kzl.lib.http.client.interfaces.ISyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
@@ -20,7 +20,7 @@ public class PostImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncH
 
     public static ISyncHttpClient getSyncHttpClient() {
         if (syncHttpClient == null) {
-            syncHttpClient = new PostSyncHttpClient();
+            syncHttpClient = new PostImplSyncHttpClient();
         }
         return syncHttpClient;
     }
