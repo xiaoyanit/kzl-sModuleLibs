@@ -14,7 +14,6 @@ import com.kzl.lib.utils.LogUtil;
  * Created by Administrator on 14-4-15.
  */
 public class GetImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncHttpTask<T> {
-    private final static String LOG_TAG = "HTTPUtil";
     @SuppressWarnings("unchecked")
     public T execute(final EmptyHttpRequest request, final String url, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
         LogUtil.trace(LOG_TAG,"GetImplSyncHttpTask");

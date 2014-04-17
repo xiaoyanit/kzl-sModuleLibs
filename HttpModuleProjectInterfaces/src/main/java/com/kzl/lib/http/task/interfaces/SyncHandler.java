@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * Created by Administrator on 14-4-15.
  */
 public class SyncHandler implements InvocationHandler {
-    private final static String LOG_TAG = "HTTPUtil";
+    private final static String LOG_TAG = GPConstantValues.LOG_TAG;
 
     private Object object;
 
