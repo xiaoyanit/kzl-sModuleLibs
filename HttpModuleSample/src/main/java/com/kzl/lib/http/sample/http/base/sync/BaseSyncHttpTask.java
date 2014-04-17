@@ -36,12 +36,10 @@ public class BaseSyncHttpTask<T extends BaseResponse> {
         return instance;
     }
 
-    @SuppressWarnings("unchecked")
     public T get(BaseRequest request) {
         return getSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
 
-    @SuppressWarnings("unchecked")
     public T post(BaseRequest request) {
         return postSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
