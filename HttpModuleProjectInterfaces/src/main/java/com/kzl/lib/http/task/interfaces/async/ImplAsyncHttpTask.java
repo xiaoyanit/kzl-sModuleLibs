@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.async;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.AsyncHttpClient;
+import com.kzl.lib.http.client.impl.AsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;

@@ -1,7 +1,6 @@
-package com.kzl.lib.http.client;
+package com.kzl.lib.http.client.impl;
 
 import android.os.AsyncTask;
-
 
 import com.kzl.lib.http.client.callback.IHttpExecute;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;

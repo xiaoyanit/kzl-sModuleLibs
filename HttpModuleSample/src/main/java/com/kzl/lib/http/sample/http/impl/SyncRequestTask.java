@@ -10,6 +10,7 @@ import com.kzl.lib.http.sample.module.response.LoginResponse;
  */
 public class SyncRequestTask {
     public static LoginResponse loginTask(final String account, final String md5Password) {
+        BaseSyncHttpTask.getInstance().post(new LoginRequest(account, md5Password));
         return (LoginResponse) BaseSyncHttpTask.getInstance().get(new LoginRequest(account, md5Password));
     }
 }
