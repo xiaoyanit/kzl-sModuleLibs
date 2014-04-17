@@ -74,6 +74,7 @@
     <orderEntry type="library" exported="" name="gson-2.2.2" level="project" />
     <orderEntry type="module" module-name="android-common-master" exported="" />
     <orderEntry type="module" module-name="UtilsModule" exported="" />
+    <orderEntry type="module" module-name="HttpModuleClientInterface" />
   </component>
 </module>
 

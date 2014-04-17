@@ -11,7 +11,8 @@
             <option value="$PROJECT_DIR$/AdapterModule" />
             <option value="$PROJECT_DIR$/AdapterModuleSample" />
             <option value="$PROJECT_DIR$/HttpModuleClient" />
-            <option value="$PROJECT_DIR$/HttpModuleInterfaces" />
+            <option value="$PROJECT_DIR$/HttpModuleClientInterface" />
+            <option value="$PROJECT_DIR$/HttpModuleProjectInterfaces" />
             <option value="$PROJECT_DIR$/HttpModuleSample" />
             <option value="$PROJECT_DIR$/UtilsModule" />
             <option value="$PROJECT_DIR$/android-common-master" />

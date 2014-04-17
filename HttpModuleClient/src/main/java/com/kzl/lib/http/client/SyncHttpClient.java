@@ -1,7 +1,7 @@
 package com.kzl.lib.http.client;
 
-import com.kzl.lib.http.client.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 
 import cn.trinea.android.common.entity.HttpRequest;

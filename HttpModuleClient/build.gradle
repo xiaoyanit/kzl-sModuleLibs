@@ -18,6 +18,7 @@ android {
 
 dependencies {
     compile project(':UtilsModule')
+    compile project(':HttpModuleClientInterface')
     compile project(':android-common-master')
     compile files('src/main/libs/gson-2.2.2.jar')
 }

@@ -2,12 +2,12 @@ package com.kzl.lib.http.sample.http.base;
 
 import android.content.Context;
 
+import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.sample.R;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.task.interfaces.async.ImplAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
-import com.kzl.lib.http.client.model.EmptyHttpResponse;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.ToastUtil;
 

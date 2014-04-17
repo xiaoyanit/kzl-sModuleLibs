@@ -3,10 +3,11 @@ package com.kzl.lib.http.client.utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;
-import com.kzl.lib.http.client.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.callback.IHttpResponseHandler;
-import com.kzl.lib.http.client.model.EmptyHttpRequest;
-import com.kzl.lib.http.client.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
+import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.utils.LogUtil;
 
 import cn.trinea.android.common.entity.HttpResponse;

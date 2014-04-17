@@ -2,11 +2,12 @@ package com.kzl.lib.http.sample.http.impl;
 
 
 import android.content.Context;
+
+import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.sample.http.base.BaseAsyncHttpTask;
 import com.kzl.lib.http.sample.module.request.LoginRequest;
 import com.kzl.lib.http.sample.module.response.LoginResponse;
 import com.kzl.lib.utils.LogUtil;
-import com.kzl.lib.http.client.model.EmptyHttpResponse;
 
 /**
  * Created with IntelliJ IDEA.<br/>
