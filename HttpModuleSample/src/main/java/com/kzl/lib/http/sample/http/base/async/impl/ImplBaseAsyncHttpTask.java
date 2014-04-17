@@ -11,7 +11,7 @@ import com.kzl.lib.http.sample.http.base.async.ImplAsyncHttpResponseHandler;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
 import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
-import com.kzl.lib.http.task.interfaces.async.ImplAsyncHttpTask;
+import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
 
 /**
  * Created by kzl on 14-3-19.

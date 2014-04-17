@@ -1,4 +1,4 @@
-package com.kzl.lib.http.task.interfaces.async;
+package com.kzl.lib.http.task.interfaces.async.impl;
 
 import android.content.Context;
 import com.kzl.lib.http.client.interfaces.IAsyncHttpClient;
@@ -10,6 +10,8 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.task.interfaces.GPConstantValues;
+import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
+import com.kzl.lib.http.task.interfaces.async.IHttpExecutor;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
