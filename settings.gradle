@@ -1,1 +1,1 @@
-include ':HttpModuleSample', ':UtilsModule', ':android-common-master', ':AdapterModuleSample', ':AdapterModule', ':HttpModuleClient', ':HttpModuleClientInterface', 'HttpModuleProjectInterfaces'
+include ':HttpModuleSample', ':UtilsModule', ':AdapterModuleSample', ':AdapterModule', ':HttpModuleClientInterface', ':HttpModuleClientImplLiteHttp', ':LibraryHttpModuleLiteHttpImpl', 'HttpModuleProjectInterfaces', 'HttpModuleClientImplTrinea', 'LibraryHttpModuleTrineaHttpImpl'

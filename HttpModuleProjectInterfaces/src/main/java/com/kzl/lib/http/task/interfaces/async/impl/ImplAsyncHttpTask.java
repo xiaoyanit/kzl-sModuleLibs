@@ -59,11 +59,11 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     }
 
     @Override
-    public void execute(final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
+    public void execute(final Context context,final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
         filter(url, request, new IHttpExecutor() {
             @Override
             public void execute() {
-                getAsyncHttpClient().execute(url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
+                getAsyncHttpClient().execute(context,url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
             }
         });
     }
@@ -72,4 +72,5 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     public IAsyncHttpClient getAsyncHttpClient() {
         return asyncHttpClient;
     }
+
 }
