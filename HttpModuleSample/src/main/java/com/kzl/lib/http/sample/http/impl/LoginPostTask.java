@@ -27,11 +27,6 @@ public class LoginPostTask<T extends LoginResponse> extends ImplBasePostAsyncHtt
     }
 
     @Override
-    public void onSuccess(T response) {
-        super.onSuccess(response);
-    }
-
-    @Override
     public void onError(String retCode, String errorInfo) {
         super.onError(retCode, errorInfo);
     }
