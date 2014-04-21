@@ -9,8 +9,11 @@ import com.kzl.lib.http.sample.module.response.LoginResponse;
  * Created by Administrator on 14-3-28.
  */
 public class SyncRequestTask {
-    public static LoginResponse loginTask(final String account, final String md5Password) {
-        BaseSyncHttpTask.getInstance().post(new LoginRequest(account, md5Password));
+    public static LoginResponse loginGetTask(final String account, final String md5Password) {
         return (LoginResponse) BaseSyncHttpTask.getInstance().get(new LoginRequest(account, md5Password));
+    }
+
+    public static LoginResponse loginPostTask(final String account, final String md5Password) {
+        return (LoginResponse)BaseSyncHttpTask.getInstance().post(new LoginRequest(account, md5Password));
     }
 }

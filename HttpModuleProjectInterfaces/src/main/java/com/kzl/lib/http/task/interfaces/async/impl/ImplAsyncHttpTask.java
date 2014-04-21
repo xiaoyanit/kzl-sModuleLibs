@@ -47,7 +47,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     }
 
     public void filter(final String url, final EmptyHttpRequest request, final IHttpExecutor executor) {
-        LogUtil.trace(LOG_TAG, "json-request:" + url);
+        LogUtil.trace(LOG_TAG, "json-request async:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
             iAsyncHttpResponseHandler.onNoNet();
@@ -63,7 +63,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         filter(url, request, new IHttpExecutor() {
             @Override
             public void execute() {
-                getAsyncHttpClient().execute(context,url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
+                asyncHttpClient.execute(context,url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
             }
         });
     }

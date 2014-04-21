@@ -1,5 +1,7 @@
 package com.kzl.lib.http.client.impl.sync;
 
+import android.content.Context;
+
 import com.kzl.lib.http.client.interfaces.ISyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
@@ -12,18 +14,9 @@ import cn.trinea.android.common.util.HttpUtils;
 /**
  * Created by Administrator on 14-4-17.
  */
-public class PostImplSyncHttpClient implements ISyncHttpClient {
-    /**
-     *
-     * @param requestUrl
-     * @param request
-     * @param classOfT
-     * @param filter
-     * @param <T>
-     * @return
-     */
+public class PostImplSyncHttpClient<T extends EmptyHttpResponse> implements ISyncHttpClient<T> {
     @Override
-    public <T extends EmptyHttpResponse> T execute(String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+    public  T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
         HttpResponse response = HttpUtils.httpPost(requestUrl);
         return HttpCommonUtil.onFinish(response, classOfT, null, filter);
     }

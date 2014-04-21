@@ -25,7 +25,8 @@ public class MyActivity extends Activity {
                 ThreadPoolUtil.getThreadPool().execute(new Runnable() {
                     @Override
                     public void run() {
-                        SyncRequestTask.loginTask("may123", MD5Util.getMD5Str("may123"));
+                        SyncRequestTask.loginGetTask("may123", MD5Util.getMD5Str("may123"));
+                        SyncRequestTask.loginPostTask("may123", MD5Util.getMD5Str("may123"));
                     }
                 });
             }

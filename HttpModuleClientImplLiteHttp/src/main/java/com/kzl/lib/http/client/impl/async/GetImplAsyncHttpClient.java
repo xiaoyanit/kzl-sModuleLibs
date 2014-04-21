@@ -15,21 +15,12 @@ import com.litesuits.http.request.param.HttpMethod;
 import com.litesuits.http.response.Response;
 
 /**
-* Created by Administrator on 14-4-17.
-* 通过AsyncTask实现的get异步请求
-*/
-public class GetImplAsyncHttpClient implements IAsyncHttpClient {
-    /**
-     *
-     * @param requestUrl
-     * @param request
-     * @param classOfT
-     * @param handler
-     * @param filter
-     * @param <T>
-     */
+ * Created by Administrator on 14-4-17.
+ * 通过AsyncTask实现的get异步请求
+ */
+public class GetImplAsyncHttpClient<T extends EmptyHttpResponse> implements IAsyncHttpClient<T> {
     @Override
-    public <T extends EmptyHttpResponse> void execute(final Context context, final String requestUrl, EmptyHttpRequest request, final Class<T> classOfT, IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
+    public void execute(final Context context, final String requestUrl, EmptyHttpRequest request, final Class<T> classOfT, IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
         AsyncHttpUtil.execute(classOfT, handler, new IHttpExecute() {
             @Override
             public Response execute() {

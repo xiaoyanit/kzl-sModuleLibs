@@ -1,6 +1,9 @@
 package com.kzl.lib.http.sample.http.base.sync;
 
 
+import android.content.Context;
+
+import com.kzl.lib.http.sample.APP;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
 import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
@@ -24,14 +27,14 @@ public class BaseSyncHttpTask<T extends BaseResponse> {
     private ISyncHttpTask<T> getSyncHttpTask;
     private ISyncHttpTask<T> postSyncHttpTask;
 
-    private BaseSyncHttpTask() {
-        getSyncHttpTask = new GetImplSyncHttpTask<T>();
-        postSyncHttpTask = new PostImplSyncHttpTask<T>();
+    private BaseSyncHttpTask(Context context) {
+        getSyncHttpTask = new GetImplSyncHttpTask<T>(context);
+        postSyncHttpTask = new PostImplSyncHttpTask<T>(context);
     }
 
     public static BaseSyncHttpTask getInstance() {
         if (instance == null) {
-            instance = new BaseSyncHttpTask();
+            instance = new BaseSyncHttpTask(APP.getInstance().getApplicationContext());
         }
         return instance;
     }

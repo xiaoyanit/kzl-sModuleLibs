@@ -12,6 +12,14 @@ import com.kzl.lib.http.task.interfaces.GPConstantValues;
  */
 public interface ISyncHttpTask<T extends EmptyHttpResponse> {
     final static String LOG_TAG = GPConstantValues.LOG_TAG;
+
+    /**
+     * @param request
+     * @param url
+     * @param mapper
+     * @param filter
+     * @return
+     */
     public T execute(final EmptyHttpRequest request, final String url, final HttpResponseMapper mapper, final IHttpResponseFilter filter);
 
 }

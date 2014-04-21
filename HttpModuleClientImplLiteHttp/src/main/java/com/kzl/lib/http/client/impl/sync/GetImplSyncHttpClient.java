@@ -16,18 +16,9 @@ import com.litesuits.http.response.Response;
 /**
 * Created by Administrator on 14-4-17.
 */
-public class GetImplSyncHttpClient implements ISyncHttpClient {
-    /**
-     *
-     * @param requestUrl
-     * @param request
-     * @param classOfT
-     * @param filter
-     * @param <T>
-     * @return
-     */
+public class GetImplSyncHttpClient<T extends EmptyHttpResponse> implements ISyncHttpClient<T> {
     @Override
-    public <T extends EmptyHttpResponse> T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+    public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
         Response res = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Get));
         return HttpCommonUtil.onFinish(res.getString(), classOfT, null, filter);
     }

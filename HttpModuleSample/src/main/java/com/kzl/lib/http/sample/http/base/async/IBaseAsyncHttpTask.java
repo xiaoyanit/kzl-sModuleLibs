@@ -11,5 +11,8 @@ import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
  * To change this template use File | Settings | File Templates.
  */
 public interface IBaseAsyncHttpTask {
+    /**
+     * @param request
+     */
     public void execute(final BaseHttpRequest request);
 }

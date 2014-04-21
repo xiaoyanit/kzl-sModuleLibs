@@ -12,7 +12,7 @@ public abstract class SyncHttpExecute {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     public abstract <T extends EmptyHttpResponse> T execute();
     public <T extends EmptyHttpResponse> T filter(String url, EmptyHttpRequest request) {
-        LogUtil.trace(LOG_TAG, "json-request:" + url);
+        LogUtil.trace(LOG_TAG, "json-request sync:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
 
         final long start = System.currentTimeMillis();

@@ -21,18 +21,10 @@ import com.litesuits.http.response.handler.HttpResponseHandler;
  * Created by Administrator on 14-4-17.
  * 使用第三方实现get方式异步请求
  */
-public class GetImplInnerAsyncHttpClient implements IAsyncHttpClient {
+public class GetImplInnerAsyncHttpClient<T extends EmptyHttpResponse> implements IAsyncHttpClient<T> {
 
-    /**
-     * @param requestUrl
-     * @param request
-     * @param classOfT
-     * @param handler
-     * @param filter
-     * @param <T>
-     */
     @Override
-    public <T extends EmptyHttpResponse> void execute(Context context, String requestUrl, EmptyHttpRequest request, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
+    public void execute(Context context, String requestUrl, EmptyHttpRequest request, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
         HttpAsyncExcutor asyncExcutor = new HttpAsyncExcutor();
 
         asyncExcutor.execute(LiteHttpClient.getInstance(context), new Request(requestUrl), new HttpResponseHandler() {
