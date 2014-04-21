@@ -9,8 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/HttpModuleClientInterface/HttpModuleClientInterface.iml" filepath="$PROJECT_DIR$/HttpModuleClientInterface/HttpModuleClientInterface.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpModuleProjectInterfaces/HttpModuleProjectInterfaces.iml" filepath="$PROJECT_DIR$/HttpModuleProjectInterfaces/HttpModuleProjectInterfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpModuleSample/HttpModuleSample.iml" filepath="$PROJECT_DIR$/HttpModuleSample/HttpModuleSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LibraryHttpModuleLiteHttpImpl/LibraryHttpModuleLiteHttpImpl.iml" filepath="$PROJECT_DIR$/LibraryHttpModuleLiteHttpImpl/LibraryHttpModuleLiteHttpImpl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LibraryHttpModuleTrineaHttpImpl/LibraryHttpModuleTrineaHttpImpl.iml" filepath="$PROJECT_DIR$/LibraryHttpModuleTrineaHttpImpl/LibraryHttpModuleTrineaHttpImpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibraryHttpModuleImplLiteHttp/LibraryHttpModuleImplLiteHttp.iml" filepath="$PROJECT_DIR$/LibraryHttpModuleImplLiteHttp/LibraryHttpModuleImplLiteHttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibraryHttpModuleImplTrineaHttp/LibraryHttpModuleImplTrineaHttp.iml" filepath="$PROJECT_DIR$/LibraryHttpModuleImplTrineaHttp/LibraryHttpModuleImplTrineaHttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/UtilsModule/UtilsModule.iml" filepath="$PROJECT_DIR$/UtilsModule/UtilsModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/kzl-sModuleLibs.iml" filepath="$PROJECT_DIR$/kzl-sModuleLibs.iml" />
     </modules>

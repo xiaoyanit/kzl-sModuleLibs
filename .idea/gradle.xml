@@ -15,8 +15,8 @@
             <option value="$PROJECT_DIR$/HttpModuleClientInterface" />
             <option value="$PROJECT_DIR$/HttpModuleProjectInterfaces" />
             <option value="$PROJECT_DIR$/HttpModuleSample" />
-            <option value="$PROJECT_DIR$/LibraryHttpModuleLiteHttpImpl" />
-            <option value="$PROJECT_DIR$/LibraryHttpModuleTrineaHttpImpl" />
+            <option value="$PROJECT_DIR$/LibraryHttpModuleImplLiteHttp" />
+            <option value="$PROJECT_DIR$/LibraryHttpModuleImplTrineaHttp" />
             <option value="$PROJECT_DIR$/UtilsModule" />
           </set>
         </option>

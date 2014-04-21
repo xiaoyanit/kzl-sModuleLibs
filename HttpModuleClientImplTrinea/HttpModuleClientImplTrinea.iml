@@ -74,7 +74,7 @@
     <orderEntry type="module" module-name="UtilsModule" exported="" />
     <orderEntry type="module" module-name="HttpModuleClientInterface" exported="" />
     <orderEntry type="library" exported="" name="gson-2.2.2" level="project" />
-    <orderEntry type="module" module-name="LibraryHttpModuleTrineaHttpImpl" exported="" />
+    <orderEntry type="module" module-name="LibraryHttpModuleImplTrineaHttp" exported="" />
   </component>
 </module>
 

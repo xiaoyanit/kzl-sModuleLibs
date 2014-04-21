@@ -19,6 +19,6 @@ android {
 dependencies {
     compile project(':UtilsModule')
     compile project(':HttpModuleClientInterface')
-    compile project(':LibraryHttpModuleTrineaHttpImpl')
+    compile project(':LibraryHttpModuleImplTrineaHttp')
     compile files('src/main/libs/gson-2.2.2.jar')
 }
