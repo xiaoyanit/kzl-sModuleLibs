@@ -4,10 +4,11 @@ package com.kzl.lib.http.task.interfaces;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-12-3<br/>
- * Time: 下午5:30<br/>
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class BaseHttpRequest extends EmptyHttpRequest {

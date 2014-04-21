@@ -5,10 +5,11 @@ import com.kzl.lib.utils.CrashHandler;
 import com.kzl.lib.utils.ToastUtil;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-11-13<br/>
- * Time: 上午9:21<br/>
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class APP extends Application {

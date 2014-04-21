@@ -5,7 +5,12 @@ import com.kzl.lib.http.client.impl.async.GetImplAsyncHttpClient;
 import com.kzl.lib.http.sample.module.BaseResponse;
 
 /**
- * Created by kzl on 14-3-19.
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public class ImplBaseGetAsyncHttpTask<T extends BaseResponse> extends ImplBaseAsyncHttpTask<T> {
     public ImplBaseGetAsyncHttpTask(Context context) {

@@ -3,11 +3,11 @@ package com.kzl.lib.http.sample.http.base;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
 
 /**
- * Project:HttpModule
+ * Project:LuLuModuleLibs
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
- * Date: 14-3-28<br/>
- * Time: 下午11:21<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public interface IAsyncHttpResponseSuccessHandler<T extends BaseHttpResponse> {

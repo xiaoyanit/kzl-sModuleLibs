@@ -16,8 +16,13 @@ import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
 /**
- * Created by kzl on 14-3-19.
  * 直接继承EmptyHttResponse则直接调用onNormal，onError将不会被调用
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpTask {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;

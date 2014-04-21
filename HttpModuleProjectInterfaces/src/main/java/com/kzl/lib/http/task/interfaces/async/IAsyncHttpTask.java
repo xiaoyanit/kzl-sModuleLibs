@@ -7,8 +7,21 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 
 /**
- * Created by Administrator on 14-4-17.
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public interface IAsyncHttpTask {
+    /**
+     *
+     * @param context
+     * @param url
+     * @param request
+     * @param mapper
+     * @param filter
+     */
     void execute(final Context context , final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter);
 }

@@ -12,7 +12,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
  */
 public interface IHttpResponseHandler<T extends EmptyHttpResponse>  {
     /**
-     * do when you baseGet the http response
+     * do when you get the http response
      *
      * @param response
      */

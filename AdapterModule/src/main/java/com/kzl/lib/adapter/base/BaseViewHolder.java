@@ -1,13 +1,14 @@
 package com.kzl.lib.adapter.base;
 
 /**
- * Project:adapter module
+ * 数据绑定类 包含绑定的控件成员 绑定方法。
+ * a bindable interface with a setData method
+ * Project:LuLuModuleLibs
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
- * Date: 14-4-2<br/>
- * Time: 下午8:23<br/>
- * a bindable interface with a setData method
- * 数据绑定类 包含绑定的控件成员 绑定方法。
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public interface BaseViewHolder<D> extends UnMixable {
     /**

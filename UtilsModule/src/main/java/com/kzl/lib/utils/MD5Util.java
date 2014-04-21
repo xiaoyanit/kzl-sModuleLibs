@@ -5,10 +5,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-10-9<br/>
- * Time: 下午3:32<br/>
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class MD5Util {

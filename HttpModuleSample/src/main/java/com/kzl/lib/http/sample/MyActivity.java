@@ -9,6 +9,14 @@ import com.kzl.lib.http.sample.http.impl.SyncRequestTask;
 import com.kzl.lib.utils.MD5Util;
 import com.kzl.lib.utils.ThreadPoolUtil;
 
+/**
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
+ */
 public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.

@@ -15,7 +15,12 @@ import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
 
 /**
- * Created by kzl on 14-3-19.
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public class ImplBaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpResponseHandler<T> implements IBaseAsyncHttpTask, IAsyncHttpResponseSuccessHandler<T> {
     private Context context;

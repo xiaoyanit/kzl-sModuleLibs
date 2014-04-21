@@ -7,9 +7,11 @@ import java.util.ArrayList;
 
 /**
  * 应用程序Activity管理类:用于Activity管理和应用程序退出<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-10-9<br/>
- * Time: 下午2:43<br/>
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class AppManager {

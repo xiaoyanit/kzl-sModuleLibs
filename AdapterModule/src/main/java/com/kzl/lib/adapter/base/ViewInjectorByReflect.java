@@ -5,7 +5,7 @@ import android.view.View;
 import java.lang.reflect.Field;
 
 /**
- * Project:adapter module
+ * Project:LuLuModuleLibs
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
  * Date: 14-4-2<br/>

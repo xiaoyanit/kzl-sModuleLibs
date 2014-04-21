@@ -7,10 +7,11 @@ import android.os.Message;
 import android.widget.Toast;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-10-11<br/>
- * Time: 下午2:53<br/>
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class ToastUtil {

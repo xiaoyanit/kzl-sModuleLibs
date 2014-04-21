@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* Project:HttpModule
-* Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
-* User: kenny.ke
-* Date: 14-3-28<br/>
-* Time: 下午9:26<br/>
-* To change this template use File | Settings | File Templates.
-*/
+ * Project:LuLuModuleLibs
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
+ */
 public class GpConstantsActionCode extends HttpResponseMapper {
     private final static Map<String, Class<? extends BaseHttpResponse>> CLASS_MAP = new HashMap<String, Class<? extends BaseHttpResponse>>();
     public final static String HOST = "";//TODO 添加主机url

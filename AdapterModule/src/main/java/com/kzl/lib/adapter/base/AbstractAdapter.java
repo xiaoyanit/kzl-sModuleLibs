@@ -9,15 +9,14 @@ import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
- * Project:adapter module
+ * a abstract class do some job to reduce code about bind view to holder and easy on use baseAdapter
+ * Project:LuLuModuleLibs
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
- * Date: 14-4-2<br/>
- * Time: 下午8:26<br/>
- * a abstract class do some job to reduce code about bind view to holder and
- * easy on use baseAdapter
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public abstract class AbstractAdapter<D> extends BaseAdapter {
 
