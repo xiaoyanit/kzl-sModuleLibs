@@ -14,7 +14,11 @@ import org.json.JSONObject;
  * To change this template use File | Settings | File Templates.
  */
 public class HttpCommonUtils {
-
+    /**
+     * generate the request url by the request
+     * @param request
+     * @return
+     */
     public static String getRequestUrl(BaseHttpRequest request) {
         return String.format("%s%s", String.format("%s%s", GpConstantsActionCode.HOST, request.getActionCode()), request.toString());
     }

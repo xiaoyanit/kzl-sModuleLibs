@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * ActionCode Response 映射类
  * Project:LuLuModuleLibs
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
@@ -21,14 +22,15 @@ public class GpConstantsActionCode extends HttpResponseMapper {
     public final static String HOST = "";//TODO 添加主机url
     public final static String RES_OK = "0";
     public static final String LOGIN_ACTION = "login.action";
-    private static final GpConstantsActionCode instance =  new GpConstantsActionCode();
-    public static GpConstantsActionCode getInstance(){
-        return  instance;
+    private static final GpConstantsActionCode instance = new GpConstantsActionCode();
+
+    public static GpConstantsActionCode getInstance() {
+        return instance;
     }
 
     public GpConstantsActionCode() {
         CLASS_MAP.put(LOGIN_ACTION, LoginResponse.class);
-   }
+    }
 
     public <T extends EmptyHttpResponse> Class<T> findClass(String actionCode) {
         Class c = CLASS_MAP.get(actionCode);

@@ -4,6 +4,7 @@ import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.module.BaseRequest;
 
 /**
+ * 登录请求类
  * Project:HttpModule
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke
