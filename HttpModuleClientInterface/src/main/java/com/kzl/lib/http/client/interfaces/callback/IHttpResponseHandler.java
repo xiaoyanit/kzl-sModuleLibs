@@ -6,7 +6,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 /**
  * http响应结果派发器<br/>
  * Project:LuLuModuleLibs<br/>
- * Module:HttpModuleProjectInterfaces<br/>
+ * Module:HttpModuleClientInterface<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>
