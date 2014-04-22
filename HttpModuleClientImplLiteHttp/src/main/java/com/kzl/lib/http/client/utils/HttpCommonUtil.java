@@ -11,7 +11,14 @@ import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.utils.LogUtil;
 
 /**
- * Created by Administrator on 14-3-19.
+ * http工具类
+ * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleClientImplLiteHttp<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public class HttpCommonUtil {
     private final static String LOG_TAG = "HTTPUtil";
