@@ -12,12 +12,12 @@ import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
  */
 public interface IAsyncHttpResponseSuccessHandler<T extends BaseHttpResponse> {
     /**
-     * http访问正常，数据正常
+     * http访问正常，业务逻辑正常
      */
     public void onNormal(T rest);
 
     /**
-     * http访问正常，但是数据错误
+     * http访问正常，业务逻辑错误
      */
     public void onError(String retCode, String errorInfo);
 }

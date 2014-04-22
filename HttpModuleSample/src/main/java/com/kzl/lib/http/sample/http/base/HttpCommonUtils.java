@@ -6,9 +6,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Project:LuLuModuleLibs
+ * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
- * User: kenny.ke
+ * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
@@ -24,7 +24,8 @@ public class HttpCommonUtils {
     }
 
     /**
-     * to baseGet the really result json,but the server return the json with in a key "zushou365",so I baseGet the json by this key
+     * to baseGet the really result json
+     * but the server return the json with in a key "zushou365",so I baseGet the json by this key
      *
      * @param content
      * @return he really result json

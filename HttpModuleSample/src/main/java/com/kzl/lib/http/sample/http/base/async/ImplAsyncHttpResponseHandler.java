@@ -9,9 +9,10 @@ import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.ToastUtil;
 
 /**
- * Project:LuLuModuleLibs
+ * http访问流程的实现类<br/>
+ * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
- * User: kenny.ke
+ * User: kenny.ke<br/>
  * Date: 2014/4/17<br/>
  * Time: 21:25<br/>
  * To change this template use File | Settings | File Templates.

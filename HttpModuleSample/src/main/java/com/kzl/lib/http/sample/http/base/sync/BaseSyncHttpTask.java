@@ -14,12 +14,12 @@ import com.kzl.lib.http.task.interfaces.sync.impl.GetImplSyncHttpTask;
 import com.kzl.lib.http.task.interfaces.sync.impl.PostImplSyncHttpTask;
 
 /**
- * Created by zhenlu .
- * Project:ZuShou365_phone
- * Email: kezhenlu@qq.com<br/>
- * User: kenny.ke
- * Date: 14-3-27<br/>
- * Time: 下午9:49<br/>
+ * 应用http 同步访问的基类，建议以组合的方式使用，不要继承<br/>
+ * Project:LuLuModuleLibs<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/17<br/>
+ * Time: 21:25<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class BaseSyncHttpTask<T extends BaseResponse> {
@@ -39,10 +39,20 @@ public class BaseSyncHttpTask<T extends BaseResponse> {
         return instance;
     }
 
+    /**
+     * sync http get
+     * @param request
+     * @return
+     */
     public T get(BaseRequest request) {
         return getSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
 
+    /**
+     * sync http post
+     * @param request
+     * @return
+     */
     public T post(BaseRequest request) {
         return postSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }

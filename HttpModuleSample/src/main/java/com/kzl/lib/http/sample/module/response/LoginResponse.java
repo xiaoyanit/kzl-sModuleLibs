@@ -3,6 +3,7 @@ package com.kzl.lib.http.sample.module.response;
 import com.kzl.lib.http.sample.module.BaseResponse;
 
 /**
+ * 登录响应类
  * Project:HttpModule
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke

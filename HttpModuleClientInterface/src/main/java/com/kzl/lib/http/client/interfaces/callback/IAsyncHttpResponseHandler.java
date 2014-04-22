@@ -28,12 +28,12 @@ public interface IAsyncHttpResponseHandler<T extends EmptyHttpResponse> {
     public void onNoNet();
 
     /**
-     * 无发解析结果时回调
+     * 无法解析结果时回调
      */
     public void onNoData();
 
     /**
-     * 访问正常、数据不为空时回调
+     * 访问正常,数据不为空时回调
      */
     public void onSuccess(final T response);
 
