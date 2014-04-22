@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
+ * http请求工具类，异步同步公用<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

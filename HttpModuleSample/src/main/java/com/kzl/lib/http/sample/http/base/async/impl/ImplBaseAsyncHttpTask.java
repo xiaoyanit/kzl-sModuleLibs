@@ -15,7 +15,7 @@ import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
 import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
 
 /**
- * http 访问的基类,get、post等具体实现，都可以继承本类<br/>
+ * http 异步访问的基类,get、post等具体实现，都可以继承本类<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

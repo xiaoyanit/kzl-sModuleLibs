@@ -8,10 +8,12 @@ import com.kzl.lib.http.sample.module.response.LoginResponse;
 import com.kzl.lib.utils.LogUtil;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-10-11<br/>
- * Time: 下午2:53<br/>
+ * 登录请求，异步get方式<br/>
+ * Project:LuLuModuleLibs<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public class LoginGetTask<T extends LoginResponse> extends ImplBaseGetAsyncHttpTask<T> {

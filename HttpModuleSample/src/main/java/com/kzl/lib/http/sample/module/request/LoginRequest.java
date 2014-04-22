@@ -4,10 +4,10 @@ import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.module.BaseRequest;
 
 /**
- * 登录请求类
- * Project:HttpModule
+ * 登录请求类<br/>
+ * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
- * User: kenny.ke
+ * User: kenny.ke<br/>
  * Date: 14-3-30<br/>
  * Time: 下午7:37<br/>
  * To change this template use File | Settings | File Templates.

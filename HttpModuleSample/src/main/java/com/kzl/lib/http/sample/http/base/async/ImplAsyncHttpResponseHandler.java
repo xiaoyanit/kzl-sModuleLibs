@@ -9,7 +9,7 @@ import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.ToastUtil;
 
 /**
- * http访问流程的实现类<br/>
+ * http异步访问流程的实现类<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

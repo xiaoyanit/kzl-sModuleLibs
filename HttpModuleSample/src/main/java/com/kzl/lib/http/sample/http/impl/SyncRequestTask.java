@@ -6,7 +6,13 @@ import com.kzl.lib.http.sample.module.request.LoginRequest;
 import com.kzl.lib.http.sample.module.response.LoginResponse;
 
 /**
- * Created by Administrator on 14-3-28.
+ * 登录请求，同步请求方式r/>
+ * Project:LuLuModuleLibs<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public class SyncRequestTask {
     public static LoginResponse loginGetTask(final String account, final String md5Password) {

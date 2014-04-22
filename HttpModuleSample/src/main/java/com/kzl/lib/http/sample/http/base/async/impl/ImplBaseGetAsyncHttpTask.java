@@ -5,7 +5,7 @@ import com.kzl.lib.http.client.impl.async.GetImplAsyncHttpClient;
 import com.kzl.lib.http.sample.module.BaseResponse;
 
 /**
- * get http请求基类<br/>
+ * http async get 请求基类<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

@@ -10,8 +10,8 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.task.interfaces.GPConstantValues;
+import com.kzl.lib.http.task.interfaces.async.IAsyncHttpExecutor;
 import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
-import com.kzl.lib.http.task.interfaces.async.IHttpExecutor;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
@@ -57,7 +57,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
      * @param request
      * @param executor
      */
-    private void filter(final String url, final EmptyHttpRequest request, final IHttpExecutor executor) {
+    private void filter(final String url, final EmptyHttpRequest request, final IAsyncHttpExecutor executor) {
         LogUtil.trace(LOG_TAG, "json-request async:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
@@ -71,7 +71,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
 
     @Override
     public void execute(final Context context,final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
-        filter(url, request, new IHttpExecutor() {
+        filter(url, request, new IAsyncHttpExecutor() {
             @Override
             public void execute() {
                 asyncHttpClient.execute(context,url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);

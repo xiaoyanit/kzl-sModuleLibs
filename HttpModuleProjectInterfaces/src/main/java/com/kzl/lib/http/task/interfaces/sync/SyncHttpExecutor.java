@@ -6,7 +6,7 @@ import com.kzl.lib.http.task.interfaces.GPConstantValues;
 import com.kzl.lib.utils.LogUtil;
 
 /**
- * 同步http请求的执行器抽象类<br/>
+ * http同步请求的执行器抽象类<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
@@ -14,7 +14,7 @@ import com.kzl.lib.utils.LogUtil;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public abstract class SyncHttpExecute {
+public abstract class SyncHttpExecutor {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
 
     /**

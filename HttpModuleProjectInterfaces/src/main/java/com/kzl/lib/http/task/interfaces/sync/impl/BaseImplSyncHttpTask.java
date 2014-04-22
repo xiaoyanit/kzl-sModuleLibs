@@ -9,7 +9,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.task.interfaces.sync.ISyncHttpTask;
-import com.kzl.lib.http.task.interfaces.sync.SyncHttpExecute;
+import com.kzl.lib.http.task.interfaces.sync.SyncHttpExecutor;
 import com.kzl.lib.utils.LogUtil;
 
 /**
@@ -28,7 +28,7 @@ public class BaseImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncH
     @Override
     public T execute(final EmptyHttpRequest request, final String url, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
         LogUtil.trace(LOG_TAG, "BaseImplSyncHttpTask");
-        return new SyncHttpExecute() {
+        return new SyncHttpExecutor() {
             @Override
             public T execute() {
                 return (T) syncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request), filter);

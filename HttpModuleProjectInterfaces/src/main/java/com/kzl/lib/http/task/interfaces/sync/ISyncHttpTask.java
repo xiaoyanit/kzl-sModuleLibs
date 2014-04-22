@@ -20,7 +20,7 @@ public interface ISyncHttpTask<T extends EmptyHttpResponse> {
     final static String LOG_TAG = GPConstantValues.LOG_TAG;
 
     /**
-     * sync http execute
+     *  http sync execute
      * @param request
      * @param url
      * @param mapper

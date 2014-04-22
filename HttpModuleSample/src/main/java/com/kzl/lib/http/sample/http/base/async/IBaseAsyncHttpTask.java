@@ -3,7 +3,7 @@ package com.kzl.lib.http.sample.http.base.async;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 
 /**
- * 异步http访问类的执行接口<br/>
+ * http异步访问类的执行接口<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

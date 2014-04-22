@@ -14,7 +14,7 @@ import com.kzl.lib.http.task.interfaces.sync.impl.GetImplSyncHttpTask;
 import com.kzl.lib.http.task.interfaces.sync.impl.PostImplSyncHttpTask;
 
 /**
- * 应用http 同步访问的基类，建议以组合的方式使用，不要继承<br/>
+ * 应用 http 同步访问的基类，建议以组合的方式使用，不要继承<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

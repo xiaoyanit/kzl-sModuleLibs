@@ -5,7 +5,7 @@ import com.kzl.lib.http.client.impl.async.PostImplAsyncHttpClient;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
 
 /**
- * post http请求基类<br/>
+ * http async post 请求基类<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>

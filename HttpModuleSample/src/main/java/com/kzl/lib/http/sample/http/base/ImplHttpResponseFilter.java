@@ -4,6 +4,7 @@ package com.kzl.lib.http.sample.http.base;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 
 /**
+ * http响应结果过滤器实现<br/>
  * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
