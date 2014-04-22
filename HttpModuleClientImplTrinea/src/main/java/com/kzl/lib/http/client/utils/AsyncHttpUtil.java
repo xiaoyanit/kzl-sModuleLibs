@@ -11,6 +11,7 @@ import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import cn.trinea.android.common.entity.HttpResponse;
 
 /**
+ * http 异步请求执行工具
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleClientImplTrinea<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>

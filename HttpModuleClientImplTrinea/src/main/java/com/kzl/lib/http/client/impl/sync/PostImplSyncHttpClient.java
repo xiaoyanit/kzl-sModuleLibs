@@ -12,6 +12,7 @@ import cn.trinea.android.common.entity.HttpResponse;
 import cn.trinea.android.common.util.HttpUtils;
 
 /**
+ * http post同步请求实现
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleClientImplTrinea<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>

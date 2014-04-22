@@ -3,6 +3,7 @@ package com.kzl.lib.http.client.callback;
 import cn.trinea.android.common.entity.HttpResponse;
 
 /**
+ * 回调执行接口，执行http请求
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleClientImplTrinea<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
