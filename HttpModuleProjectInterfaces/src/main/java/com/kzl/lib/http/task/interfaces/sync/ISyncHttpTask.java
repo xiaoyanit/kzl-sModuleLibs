@@ -8,12 +8,19 @@ import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.task.interfaces.GPConstantValues;
 
 /**
- * Created by Administrator on 14-4-15.
+ * http同步请求执行接口
+ * Project:LuLuModuleLibs<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public interface ISyncHttpTask<T extends EmptyHttpResponse> {
     final static String LOG_TAG = GPConstantValues.LOG_TAG;
 
     /**
+     * sync http execute
      * @param request
      * @param url
      * @param mapper
