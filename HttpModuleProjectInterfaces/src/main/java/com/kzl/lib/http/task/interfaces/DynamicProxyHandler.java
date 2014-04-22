@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 /**
  * 动态代理，可以实现拦截<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

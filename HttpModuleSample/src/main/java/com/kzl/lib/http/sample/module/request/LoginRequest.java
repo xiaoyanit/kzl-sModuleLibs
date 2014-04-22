@@ -6,6 +6,7 @@ import com.kzl.lib.http.sample.module.BaseRequest;
 /**
  * 登录请求类<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleSample<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 14-3-30<br/>

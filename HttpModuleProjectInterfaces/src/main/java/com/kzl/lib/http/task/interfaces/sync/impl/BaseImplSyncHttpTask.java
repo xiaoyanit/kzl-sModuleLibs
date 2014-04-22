@@ -14,6 +14,7 @@ import com.kzl.lib.utils.LogUtil;
 /**
  * 同步请求实现的基类，子类可以直接继承传递实现，也可以很方便的以组合方式使用<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

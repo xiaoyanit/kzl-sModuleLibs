@@ -10,6 +10,7 @@ import com.kzl.lib.utils.LogUtil;
 /**
  * 登录请求，异步get方式<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleSample<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

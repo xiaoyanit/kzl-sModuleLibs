@@ -8,6 +8,7 @@ import com.kzl.lib.utils.LogUtil;
 /**
  * http同步请求的执行器抽象类<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

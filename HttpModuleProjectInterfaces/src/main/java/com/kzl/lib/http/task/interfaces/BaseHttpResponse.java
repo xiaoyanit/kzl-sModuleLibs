@@ -7,6 +7,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 /**
  * 业务的http响应基类，继承了http的空响应基类<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

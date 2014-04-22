@@ -16,7 +16,9 @@ import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
 /**
+ * 异步请求实现的基类
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

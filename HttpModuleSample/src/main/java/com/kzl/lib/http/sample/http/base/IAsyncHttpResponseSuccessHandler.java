@@ -5,6 +5,7 @@ import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
 /**
  * http请求成功后调用的接口<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleSample<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

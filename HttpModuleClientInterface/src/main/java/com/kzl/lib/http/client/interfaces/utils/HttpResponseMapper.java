@@ -7,9 +7,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Project:HttpModule
+ * Project:HttpModule<br/>
+ * Module:
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
- * User: kenny.ke
+ * User: kenny.ke<br/>
  * Date: 14-3-28<br/>
  * Time: 下午9:21<br/>
  * To change this template use File | Settings | File Templates.

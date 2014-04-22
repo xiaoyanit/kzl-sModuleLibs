@@ -8,6 +8,7 @@ import com.kzl.lib.http.sample.module.response.LoginResponse;
 /**
  * 登录请求，同步请求方式r/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleSample<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>

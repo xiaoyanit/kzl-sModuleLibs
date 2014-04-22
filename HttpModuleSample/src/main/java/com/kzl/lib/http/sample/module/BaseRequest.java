@@ -5,6 +5,7 @@ import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 /**
  * 业务请求基类，可以在这里写点项目的请求用到的公用属性<br/>
  * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleSample<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 14-3-30<br/>
