@@ -17,7 +17,7 @@ import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
  */
 public interface IAsyncHttpTask {
     /**
-     *
+     * http async execute
      * @param context
      * @param url
      * @param request

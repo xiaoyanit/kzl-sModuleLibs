@@ -10,16 +10,15 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.task.interfaces.GPConstantValues;
-import com.kzl.lib.http.task.interfaces.async.IAsyncHttpExecutor;
+import com.kzl.lib.http.task.interfaces.async.AsyncHttpExecutor;
 import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
 /**
- * 直接继承EmptyHttResponse则直接调用onNormal，onError将不会被调用
- * Project:LuLuModuleLibs
+ * Project:LuLuModuleLibs<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
- * User: kenny.ke
+ * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
@@ -30,6 +29,16 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     private IAsyncHttpClient asyncHttpClient;
     private IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler;
     private long start;
+
+    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
+        this.context = context;
+        this.asyncHttpClient = asyncHttpClient;
+        this.iAsyncHttpResponseHandler = iAsyncHttpResponseHandler;
+    }
+
+    /**
+     * 响应的handler，处理http请求响应的结果
+     */
     public final IHttpResponseHandler<T> handler = new IHttpResponseHandler<T>() {
 
         @Override
@@ -45,19 +54,14 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         }
     };
 
-    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
-        this.context = context;
-        this.asyncHttpClient = asyncHttpClient;
-        this.iAsyncHttpResponseHandler = iAsyncHttpResponseHandler;
-    }
-
     /**
+     * http异步请求执行前的准备
      *
      * @param url
      * @param request
      * @param executor
      */
-    private void filter(final String url, final EmptyHttpRequest request, final IAsyncHttpExecutor executor) {
+    private void filter(final String url, final EmptyHttpRequest request, final AsyncHttpExecutor executor) {
         LogUtil.trace(LOG_TAG, "json-request async:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
@@ -70,11 +74,11 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     }
 
     @Override
-    public void execute(final Context context,final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
-        filter(url, request, new IAsyncHttpExecutor() {
+    public void execute(final Context context, final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
+        filter(url, request, new AsyncHttpExecutor() {
             @Override
             public void execute() {
-                asyncHttpClient.execute(context,url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
+                asyncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
             }
         });
     }

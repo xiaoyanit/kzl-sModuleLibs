@@ -9,7 +9,7 @@ package com.kzl.lib.http.task.interfaces.async;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IAsyncHttpExecutor {
+public interface AsyncHttpExecutor {
     /**
      * http异步请求执行入口
      */

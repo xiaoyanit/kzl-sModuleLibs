@@ -25,7 +25,7 @@ public abstract class SyncHttpExecutor {
     public abstract <T extends EmptyHttpResponse> T execute();
 
     /**
-     * http过滤请求
+     * http同步请求执行前的准备
      * @param url
      * @param request
      * @param <T>
