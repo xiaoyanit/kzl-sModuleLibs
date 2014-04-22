@@ -4,10 +4,12 @@ package com.kzl.lib.http.client.interfaces.callback;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 /**
- * Created with IntelliJ IDEA.<br/>
- * User: kezhenlu@qq.com<br/>
- * Date: 13-10-9<br/>
- * Time: 下午3:05<br/>
+ * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
 public interface IHttpResponseHandler<T extends EmptyHttpResponse>  {

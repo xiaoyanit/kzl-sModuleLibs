@@ -1,7 +1,13 @@
 package com.kzl.lib.http.client.interfaces.callback;
 
 /**
- * Created by zhenlu on 14-3-27.
+ * Project:LuLuModuleLibs<br/>
+ * Module:HttpModuleProjectInterfaces<br/>
+ * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
+ * User: kenny.ke<br/>
+ * Date: 2014/4/21<br/>
+ * Time: 17:32<br/>
+ * To change this template use File | Settings | File Templates.
  */
 public interface IHttpResponseFilter {
     /**
