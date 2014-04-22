@@ -1,6 +1,7 @@
 package com.kzl.lib.http.client.interfaces.callback;
 
 /**
+ * http响应过滤器<br/>
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>

@@ -4,6 +4,7 @@ package com.kzl.lib.http.client.interfaces.callback;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 /**
+ * http任务的流程接口
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
@@ -38,8 +39,4 @@ public interface IAsyncHttpResponseHandler<T extends EmptyHttpResponse> {
      */
     public void onSuccess(final T response);
 
-//    /**
-//     * 访问正常时回调
-//     */
-//    public void onError(String retCode, String errorInfo);
 }

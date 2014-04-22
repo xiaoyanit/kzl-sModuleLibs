@@ -4,6 +4,7 @@ package com.kzl.lib.http.client.interfaces.callback;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 /**
+ * http响应结果派发器<br/>
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>

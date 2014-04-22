@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * ActionCode Response 映射类抽象类<br/>
- * 子类必须findClass方法,静态初始化块<br/>
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
@@ -29,6 +28,7 @@ public abstract class HttpResponseMapper {
 //    }
 
     /**
+     * 根据actionCode，找到响应类
      * 如果没有找到key对应的类型，则返回null，子类可以根据自身需求返回具体抽象类型
      *
      * @param actionCode

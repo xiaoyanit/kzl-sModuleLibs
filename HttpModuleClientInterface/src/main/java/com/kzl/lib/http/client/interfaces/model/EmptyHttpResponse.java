@@ -1,6 +1,7 @@
 package com.kzl.lib.http.client.interfaces.model;
 
 /**
+ * http的基类响应类
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleProjectInterfaces<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
