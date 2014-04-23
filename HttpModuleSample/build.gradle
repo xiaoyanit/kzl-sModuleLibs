@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    sourceSets {
+        instrumentTest.setRoot('src/main/test')
+        instrumentTest.java.srcDirs = ['src/main/test']
+    }
     buildTypes {
         release {
             runProguard false
