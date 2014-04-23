@@ -2,7 +2,7 @@ package com.kzl.lib.http.sample.http.base.async.impl;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.IAsyncHttpClient;
+import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
 import com.kzl.lib.http.sample.http.base.IAsyncHttpResponseSuccessHandler;
@@ -28,9 +28,9 @@ public class ImplBaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsync
     private Context context;
     private IAsyncHttpTask iAsyncHttpTask;
 
-    public ImplBaseAsyncHttpTask(Context context, IAsyncHttpClient iAsyncHttpClient) {
+    public ImplBaseAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient) {
         this.context = context;
-        iAsyncHttpTask = new ImplAsyncHttpTask<T>(context, iAsyncHttpClient, this);
+        iAsyncHttpTask = new ImplAsyncHttpTask<T>(context, asyncHttpClient, this);
     }
 
     @Override

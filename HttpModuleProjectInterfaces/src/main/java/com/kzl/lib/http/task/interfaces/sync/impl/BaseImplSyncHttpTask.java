@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.sync.impl;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.ISyncHttpClient;
+import com.kzl.lib.http.client.interfaces.SyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
@@ -22,10 +22,10 @@ import com.kzl.lib.utils.LogUtil;
  * To change this template use File | Settings | File Templates.
  */
 public class BaseImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncHttpTask<T> {
-    private ISyncHttpClient syncHttpClient;
+    private SyncHttpClient syncHttpClient;
     private Context context;
 
-    public BaseImplSyncHttpTask(Context context, ISyncHttpClient syncHttpClient) {
+    public BaseImplSyncHttpTask(Context context, SyncHttpClient syncHttpClient) {
         this.syncHttpClient = syncHttpClient;
         this.context = context;
     }

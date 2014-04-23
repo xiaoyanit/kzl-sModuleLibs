@@ -1,7 +1,7 @@
 package com.kzl.lib.http.task.interfaces.async.impl;
 
 import android.content.Context;
-import com.kzl.lib.http.client.interfaces.IAsyncHttpClient;
+import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
@@ -28,11 +28,11 @@ import com.kzl.lib.utils.Utils;
 public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpTask {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     protected Context context;
-    private IAsyncHttpClient asyncHttpClient;
+    private AsyncHttpClient asyncHttpClient;
     private IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler;
     private long start;
 
-    public ImplAsyncHttpTask(Context context, IAsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
+    public ImplAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
         this.context = context;
         this.asyncHttpClient = asyncHttpClient;
         this.iAsyncHttpResponseHandler = iAsyncHttpResponseHandler;

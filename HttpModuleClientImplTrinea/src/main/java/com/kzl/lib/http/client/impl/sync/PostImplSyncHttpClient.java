@@ -2,7 +2,7 @@ package com.kzl.lib.http.client.impl.sync;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.ISyncHttpClient;
+import com.kzl.lib.http.client.interfaces.SyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
@@ -21,7 +21,7 @@ import cn.trinea.android.common.util.HttpUtils;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class PostImplSyncHttpClient<T extends EmptyHttpResponse> implements ISyncHttpClient<T> {
+public class PostImplSyncHttpClient<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
     public  T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
         HttpResponse response = HttpUtils.httpPost(requestUrl);

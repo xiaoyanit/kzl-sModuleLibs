@@ -17,7 +17,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IAsyncHttpClient<T extends EmptyHttpResponse> {
+public interface AsyncHttpClient<T extends EmptyHttpResponse> {
     /**
      * @param context
      * @param requestUrl

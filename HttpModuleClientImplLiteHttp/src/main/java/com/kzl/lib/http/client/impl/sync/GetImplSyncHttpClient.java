@@ -2,7 +2,7 @@ package com.kzl.lib.http.client.impl.sync;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.ISyncHttpClient;
+import com.kzl.lib.http.client.interfaces.SyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
@@ -23,7 +23,7 @@ import com.litesuits.http.response.Response;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class GetImplSyncHttpClient<T extends EmptyHttpResponse> implements ISyncHttpClient<T> {
+public class GetImplSyncHttpClient<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
     public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
         Response res = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Get));
