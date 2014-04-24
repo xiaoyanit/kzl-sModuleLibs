@@ -36,7 +36,7 @@ public class BaseImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncH
         return new SyncHttpExecutor() {
             @Override
             public T execute() {
-                return (T) syncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request), filter);
+                return (T) syncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request.getActionCode()), filter);
             }
         }.filter(url, request);
     }

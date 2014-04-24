@@ -80,7 +80,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         filter(url, request, new AsyncHttpExecutor() {
             @Override
             public void execute() {
-                asyncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request), handler, filter);
+                asyncHttpClient.execute(context, url, request, HttpCommonUtil.getResponseClassType(mapper, request.getActionCode()), handler, filter);
             }
         });
     }

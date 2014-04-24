@@ -25,9 +25,15 @@ public class HttpCommonUtil {
     private final static String LOG_TAG = "HTTPUtil";
     private final static Gson GSON = new Gson();
 
-
-    public static <T extends EmptyHttpResponse> Class<T> getResponseClassType(HttpResponseMapper mapper, EmptyHttpRequest request) {
-        return mapper.findClass(request.getActionCode());
+    /**
+     * get the response class type  by the action  code from mapper
+     * @param mapper
+     * @param actionCode
+     * @param <T>
+     * @return
+     */
+    public static <T extends EmptyHttpResponse> Class<T> getResponseClassType(HttpResponseMapper mapper, String actionCode) {
+        return mapper.findClass(actionCode);
     }
 
     /**
