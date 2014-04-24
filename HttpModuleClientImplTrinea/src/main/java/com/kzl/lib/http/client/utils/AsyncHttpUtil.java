@@ -29,7 +29,7 @@ public class AsyncHttpUtil {
      * @param <T>
      */
     public static <T extends EmptyHttpResponse> void execute(final Class<T> classOfT,
-                                                             final IHttpResponseHandler handler, final HttpExecute httpExecute, final IHttpResponseFilter filter) {
+                                                             final IHttpResponseHandler<T> handler, final HttpExecute httpExecute, final IHttpResponseFilter filter) {
         new AsyncTask<Void, Void, HttpResponse>() {
             @Override
             protected HttpResponse doInBackground(Void... params) {
