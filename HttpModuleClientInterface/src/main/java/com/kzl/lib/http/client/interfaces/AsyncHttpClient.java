@@ -2,8 +2,8 @@ package com.kzl.lib.http.client.interfaces;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
@@ -28,5 +28,5 @@ public interface AsyncHttpClient<T extends EmptyHttpResponse> {
      */
     public void execute(Context context, final String requestUrl,
                         final EmptyHttpRequest request, final Class<T> classOfT,
-                        final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter);
+                        final HttpResponseHandler<T> handler, final HttpResponseFilter filter);
 }

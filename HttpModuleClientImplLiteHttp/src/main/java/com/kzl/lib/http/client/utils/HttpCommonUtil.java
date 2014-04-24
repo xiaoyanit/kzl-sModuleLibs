@@ -3,9 +3,8 @@ package com.kzl.lib.http.client.utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
-import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.utils.LogUtil;
@@ -55,7 +54,7 @@ public class HttpCommonUtil {
      * @param <T>
      * @return
      */
-    public static <T extends EmptyHttpResponse> T onFinish(String  responseString, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
+    public static <T extends EmptyHttpResponse> T onFinish(String  responseString, final Class<T> classOfT, final HttpResponseHandler<T> handler, final HttpResponseFilter filter) {
         LogUtil.trace(LOG_TAG, "json-response:" + responseString);
         T responseEntity = null;
         try {

@@ -3,7 +3,7 @@ package com.kzl.lib.http.client.impl.sync;
 import android.content.Context;
 
 import com.kzl.lib.http.client.interfaces.SyncHttpClient;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
@@ -25,7 +25,7 @@ import com.litesuits.http.response.Response;
  */
 public class SyncHttpClientImplGet<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
-    public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+    public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, HttpResponseFilter filter) {
         Response response = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Get));
 
         return HttpCommonUtil.onFinish(HttpCommonUtil.getResponseString(response), classOfT, null, filter);

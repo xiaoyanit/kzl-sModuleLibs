@@ -10,7 +10,7 @@ package com.kzl.lib.http.client.interfaces.callback;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IHttpResponseFilter {
+public interface HttpResponseFilter {
     /**
      * filter the response json and return as you like
      *

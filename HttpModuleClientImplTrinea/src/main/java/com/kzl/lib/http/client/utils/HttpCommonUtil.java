@@ -4,8 +4,8 @@ import cn.trinea.android.common.entity.HttpResponse;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.utils.LogUtil;
 
@@ -31,7 +31,7 @@ public class HttpCommonUtil {
      * @param handler
      * @param <T>
      */
-    public static <T extends EmptyHttpResponse> T onFinish(HttpResponse response, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
+    public static <T extends EmptyHttpResponse> T onFinish(HttpResponse response, final Class<T> classOfT, final HttpResponseHandler<T> handler, final HttpResponseFilter filter) {
         LogUtil.trace(LOG_TAG, "json-response:" + response.getResponseBody());
         T responseEntity = null;
         try {

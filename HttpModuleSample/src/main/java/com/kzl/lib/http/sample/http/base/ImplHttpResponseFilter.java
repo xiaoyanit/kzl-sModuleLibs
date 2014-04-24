@@ -1,7 +1,7 @@
 package com.kzl.lib.http.sample.http.base;
 
 
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
 
 /**
  * http响应结果过滤器实现<br/>
@@ -13,7 +13,7 @@ import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplHttpResponseFilter implements IHttpResponseFilter {
+public class ImplHttpResponseFilter implements HttpResponseFilter {
 
     private static ImplHttpResponseFilter instance;
 

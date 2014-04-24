@@ -2,7 +2,7 @@ package com.kzl.lib.http.client.interfaces;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
@@ -28,6 +28,6 @@ public interface SyncHttpClient<T extends EmptyHttpResponse> {
      */
     public T execute(Context context,
                      final String requestUrl, final EmptyHttpRequest request,
-                     final Class<T> classOfT, final IHttpResponseFilter filter);
+                     final Class<T> classOfT, final HttpResponseFilter filter);
 
 }

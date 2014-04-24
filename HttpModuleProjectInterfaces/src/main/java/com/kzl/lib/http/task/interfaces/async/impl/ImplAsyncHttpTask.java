@@ -3,8 +3,8 @@ package com.kzl.lib.http.task.interfaces.async.impl;
 import android.content.Context;
 import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.AsyncHttpFlowHandler;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
@@ -41,7 +41,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     /**
      * 响应的handler，处理http请求响应的结果
      */
-    public final IHttpResponseHandler<T> handler = new IHttpResponseHandler<T>() {
+    public final HttpResponseHandler<T> handler = new HttpResponseHandler<T>() {
 
         @Override
         public void onFinish(T response) {
@@ -76,7 +76,7 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     }
 
     @Override
-    public void execute(final Context context, final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final IHttpResponseFilter filter) {
+    public void execute(final Context context, final String url, final EmptyHttpRequest request, final HttpResponseMapper mapper, final HttpResponseFilter filter) {
         filter(url, request, new AsyncHttpExecutor() {
             @Override
             public void execute() {

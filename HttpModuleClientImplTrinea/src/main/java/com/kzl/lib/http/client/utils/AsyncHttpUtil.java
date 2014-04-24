@@ -3,8 +3,8 @@ package com.kzl.lib.http.client.utils;
 import android.os.AsyncTask;
 
 import com.kzl.lib.http.client.callback.HttpExecute;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 import cn.trinea.android.common.entity.HttpResponse;
@@ -29,7 +29,7 @@ public class AsyncHttpUtil {
      * @param <T>
      */
     public static <T extends EmptyHttpResponse> void execute(final Class<T> classOfT,
-                                                             final IHttpResponseHandler<T> handler, final HttpExecute httpExecute, final IHttpResponseFilter filter) {
+                                                             final HttpResponseHandler<T> handler, final HttpExecute httpExecute, final HttpResponseFilter filter) {
         new AsyncTask<Void, Void, HttpResponse>() {
             @Override
             protected HttpResponse doInBackground(Void... params) {

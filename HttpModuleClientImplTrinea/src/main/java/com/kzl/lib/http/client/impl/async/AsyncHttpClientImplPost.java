@@ -4,8 +4,8 @@ import android.content.Context;
 
 import com.kzl.lib.http.client.callback.HttpExecute;
 import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
-import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
+import com.kzl.lib.http.client.interfaces.callback.HttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.utils.AsyncHttpUtil;
@@ -25,7 +25,7 @@ import cn.trinea.android.common.util.HttpUtils;
  */
 public class AsyncHttpClientImplPost<T extends EmptyHttpResponse> implements AsyncHttpClient<T> {
     @Override
-    public void execute(Context context, final String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseHandler<T> handler, IHttpResponseFilter filter) {
+    public void execute(Context context, final String requestUrl, EmptyHttpRequest request, Class<T> classOfT, HttpResponseHandler<T> handler, HttpResponseFilter filter) {
         AsyncHttpUtil.execute(classOfT, handler, new HttpExecute() {
             @Override
             public HttpResponse execute() {
