@@ -29,6 +29,12 @@ public class HttpCommonUtil {
     public static <T extends EmptyHttpResponse> Class<T> getResponseClassType(HttpResponseMapper mapper, EmptyHttpRequest request) {
         return mapper.findClass(request.getActionCode());
     }
+
+    /**
+     * get the response's json string
+     * @param response
+     * @return
+     */
     public static String getResponseString(Response response){
         if (response == null)
             return null;
