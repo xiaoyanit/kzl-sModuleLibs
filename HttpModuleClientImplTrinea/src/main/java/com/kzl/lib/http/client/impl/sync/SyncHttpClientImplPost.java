@@ -7,26 +7,24 @@ import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
-import com.litesuits.http.LiteHttpClient;
-import com.litesuits.http.request.Request;
-import com.litesuits.http.request.param.HttpMethod;
-import com.litesuits.http.response.Response;
 
+import cn.trinea.android.common.entity.HttpResponse;
+import cn.trinea.android.common.util.HttpUtils;
 
 /**
  * http post同步请求实现
  * Project:LuLuModuleLibs<br/>
- * Module:HttpModuleClientImplLiteHttp<br/>
+ * Module:HttpModuleClientImplTrinea<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
  * User: kenny.ke<br/>
  * Date: 2014/4/21<br/>
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class PostImplSyncHttpClient<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
+public class SyncHttpClientImplPost<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
-    public T execute(Context context, String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
-        Response res = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Post));
-        return HttpCommonUtil.onFinish(res.getString(), classOfT, null, filter);
+    public  T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+        HttpResponse response = HttpUtils.httpPost(requestUrl);
+        return HttpCommonUtil.onFinish(response, classOfT, null, filter);
     }
 }

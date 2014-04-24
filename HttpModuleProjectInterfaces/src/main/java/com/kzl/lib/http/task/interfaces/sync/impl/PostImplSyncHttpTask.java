@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.sync.impl;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.impl.sync.PostImplSyncHttpClient;
+import com.kzl.lib.http.client.impl.sync.SyncHttpClientImplPost;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 /**
@@ -18,6 +18,6 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 public class PostImplSyncHttpTask<T extends EmptyHttpResponse> extends BaseImplSyncHttpTask<T> {
 
     public PostImplSyncHttpTask(Context context) {
-        super(context, new PostImplSyncHttpClient());
+        super(context, new SyncHttpClientImplPost());
     }
 }

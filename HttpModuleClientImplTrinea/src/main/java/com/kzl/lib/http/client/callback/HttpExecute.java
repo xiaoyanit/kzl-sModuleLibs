@@ -12,7 +12,7 @@ import cn.trinea.android.common.entity.HttpResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IHttpExecute {
+public interface HttpExecute {
     /**
      * execute a http request
      * eg:baseGet , basePost ,delete ...

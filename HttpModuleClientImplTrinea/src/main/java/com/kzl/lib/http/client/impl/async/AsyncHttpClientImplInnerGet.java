@@ -22,7 +22,7 @@ import cn.trinea.android.common.util.HttpUtils;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class GetImplInnerAsyncHttpClient<T extends EmptyHttpResponse> implements AsyncHttpClient<T> {
+public class AsyncHttpClientImplInnerGet<T extends EmptyHttpResponse> implements AsyncHttpClient<T> {
 
     @Override
     public void execute(Context context, String requestUrl, EmptyHttpRequest request, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {

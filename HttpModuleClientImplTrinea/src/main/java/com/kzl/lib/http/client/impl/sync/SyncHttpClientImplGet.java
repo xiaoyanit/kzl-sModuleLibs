@@ -12,7 +12,7 @@ import cn.trinea.android.common.entity.HttpResponse;
 import cn.trinea.android.common.util.HttpUtils;
 
 /**
- * http post同步请求实现
+ * http get同步请求实现
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleClientImplTrinea<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
@@ -21,10 +21,10 @@ import cn.trinea.android.common.util.HttpUtils;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class PostImplSyncHttpClient<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
+public class SyncHttpClientImplGet<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
-    public  T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
-        HttpResponse response = HttpUtils.httpPost(requestUrl);
+    public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+        HttpResponse response = HttpUtils.httpGet(requestUrl);
         return HttpCommonUtil.onFinish(response, classOfT, null, filter);
     }
 }

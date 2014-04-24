@@ -36,9 +36,7 @@ public class AsyncHttpClientImplInnerGet<T extends EmptyHttpResponse> implements
         asyncExcutor.execute(LiteHttpClient.getInstance(context), new Request(requestUrl), new HttpResponseHandler() {
             @Override
             protected void onSuccess(Response res, HttpStatus status, NameValuePair[] headers) {
-                if (res == null)
-                    return;
-                HttpCommonUtil.onFinish(res.getString(), classOfT, handler, filter);
+                HttpCommonUtil.onFinish(HttpCommonUtil.getResponseString(res), classOfT, handler, filter);
             }
 
             @Override

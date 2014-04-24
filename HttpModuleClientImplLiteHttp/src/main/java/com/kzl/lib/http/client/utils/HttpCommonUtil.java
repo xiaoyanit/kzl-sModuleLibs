@@ -9,6 +9,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.utils.LogUtil;
+import com.litesuits.http.response.Response;
 
 /**
  * http工具类
@@ -28,7 +29,11 @@ public class HttpCommonUtil {
     public static <T extends EmptyHttpResponse> Class<T> getResponseClassType(HttpResponseMapper mapper, EmptyHttpRequest request) {
         return mapper.findClass(request.getActionCode());
     }
-
+    public static String getResponseString(Response response){
+        if (response == null)
+            return null;
+        return response.getString();
+    }
     /**
      * execute after baseGet the response
      * @param responseString

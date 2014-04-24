@@ -38,9 +38,7 @@ public class AsyncHttpUtil {
             @Override
             protected void onPostExecute(Response response) {
                 super.onPostExecute(response);
-                if (response == null)
-                    return;
-                HttpCommonUtil.onFinish(response.getString(), classOfT, handler, filter);
+                HttpCommonUtil.onFinish(HttpCommonUtil.getResponseString(response), classOfT, handler, filter);
             }
         }.execute();
     }

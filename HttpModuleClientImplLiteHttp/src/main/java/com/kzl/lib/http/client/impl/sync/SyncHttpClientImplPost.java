@@ -14,7 +14,7 @@ import com.litesuits.http.response.Response;
 
 
 /**
- * http get同步请求实现
+ * http post同步请求实现
  * Project:LuLuModuleLibs<br/>
  * Module:HttpModuleClientImplLiteHttp<br/>
  * Email: <A href="kezhenlu@qq.com">kezhenlu@qq.com</A><br/>
@@ -23,10 +23,10 @@ import com.litesuits.http.response.Response;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class GetImplSyncHttpClient<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
+public class SyncHttpClientImplPost<T extends EmptyHttpResponse> implements SyncHttpClient<T> {
     @Override
-    public T execute(Context context,String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
-        Response res = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Get));
-        return HttpCommonUtil.onFinish(res.getString(), classOfT, null, filter);
+    public T execute(Context context, String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseFilter filter) {
+        Response response = LiteHttpClient.getInstance(context).execute(new Request(requestUrl).setMethod(HttpMethod.Post));
+        return HttpCommonUtil.onFinish(HttpCommonUtil.getResponseString(response), classOfT, null, filter);
     }
 }

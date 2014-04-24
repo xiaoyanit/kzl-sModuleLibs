@@ -2,7 +2,7 @@ package com.kzl.lib.http.client.impl.async;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.callback.IHttpExecute;
+import com.kzl.lib.http.client.callback.HttpExecute;
 import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
@@ -23,10 +23,10 @@ import cn.trinea.android.common.util.HttpUtils;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class GetImplAsyncHttpClient<T extends EmptyHttpResponse> implements AsyncHttpClient<T> {
+public class AsyncHttpClientImplGet<T extends EmptyHttpResponse> implements AsyncHttpClient<T> {
     @Override
     public void execute(Context context, final String requestUrl, EmptyHttpRequest request, Class<T> classOfT, IHttpResponseHandler<T> handler, IHttpResponseFilter filter) {
-        AsyncHttpUtil.execute(classOfT, handler, new IHttpExecute() {
+        AsyncHttpUtil.execute(classOfT, handler, new HttpExecute() {
             @Override
             public HttpResponse execute() {
                 return HttpUtils.httpGet(requestUrl);
