@@ -2,8 +2,7 @@ package com.kzl.lib.http.sample.http.impl;
 
 
 import android.content.Context;
-import com.kzl.lib.http.sample.http.base.async.impl.ImplBaseGetAsyncHttpTask;
-import com.kzl.lib.http.sample.http.base.async.impl.ImplBasePostAsyncHttpTask;
+import com.kzl.lib.http.sample.http.base.async.impl.AsyncHttpTaskImplPost;
 import com.kzl.lib.http.sample.module.request.LoginRequest;
 import com.kzl.lib.http.sample.module.response.LoginResponse;
 import com.kzl.lib.utils.LogUtil;
@@ -18,9 +17,9 @@ import com.kzl.lib.utils.LogUtil;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class LoginPostTask<T extends LoginResponse> extends ImplBasePostAsyncHttpTask<T> {
+public class LoginTaskPost<T extends LoginResponse> extends AsyncHttpTaskImplPost<T> {
 
-    public LoginPostTask(Context context) {
+    public LoginTaskPost(Context context) {
         super(context);
     }
 

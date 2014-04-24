@@ -16,7 +16,7 @@ import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IAsyncHttpTask {
+public interface AsyncHttpTaskExcutor {
     /**
      * http async execute
      * @param context

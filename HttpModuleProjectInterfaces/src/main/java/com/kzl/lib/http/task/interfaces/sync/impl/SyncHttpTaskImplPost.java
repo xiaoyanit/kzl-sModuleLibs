@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.sync.impl;
 
 import android.content.Context;
 
-import com.kzl.lib.http.client.impl.sync.SyncHttpClientImplGet;
+import com.kzl.lib.http.client.impl.sync.SyncHttpClientImplPost;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
 /**
@@ -15,9 +15,9 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class GetImplSyncHttpTask<T extends EmptyHttpResponse> extends BaseImplSyncHttpTask<T> {
+public class SyncHttpTaskImplPost<T extends EmptyHttpResponse> extends SyncHttpTaskImplBase<T> {
 
-    public GetImplSyncHttpTask(Context context) {
-        super(context,new SyncHttpClientImplGet());
+    public SyncHttpTaskImplPost(Context context) {
+        super(context, new SyncHttpClientImplPost());
     }
 }

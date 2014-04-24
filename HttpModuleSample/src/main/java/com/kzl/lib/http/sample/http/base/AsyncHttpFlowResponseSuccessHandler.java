@@ -12,7 +12,7 @@ import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IAsyncHttpResponseSuccessHandler<T extends BaseHttpResponse> {
+public interface AsyncHttpFlowResponseSuccessHandler<T extends BaseHttpResponse> {
     /**
      * http访问正常，业务逻辑正常
      */

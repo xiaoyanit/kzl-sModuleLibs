@@ -11,7 +11,7 @@ import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
 import com.kzl.lib.http.task.interfaces.GPConstantValues;
 import com.kzl.lib.http.task.interfaces.async.AsyncHttpExecutor;
-import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
+import com.kzl.lib.http.task.interfaces.async.AsyncHttpTaskExcutor;
 import com.kzl.lib.utils.LogUtil;
 import com.kzl.lib.utils.Utils;
 
@@ -25,14 +25,14 @@ import com.kzl.lib.utils.Utils;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHttpTask {
+public class AsyncHttpTaskExcutorImpl<T extends EmptyHttpResponse> implements AsyncHttpTaskExcutor {
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     protected Context context;
     private AsyncHttpClient asyncHttpClient;
     private AsyncHttpFlowHandler<T> asyncHttpFlowHandler;
     private long start;
 
-    public ImplAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient, AsyncHttpFlowHandler<T> asyncHttpFlowHandler) {
+    public AsyncHttpTaskExcutorImpl(Context context, AsyncHttpClient asyncHttpClient, AsyncHttpFlowHandler<T> asyncHttpFlowHandler) {
         this.context = context;
         this.asyncHttpClient = asyncHttpClient;
         this.asyncHttpFlowHandler = asyncHttpFlowHandler;

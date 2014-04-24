@@ -12,7 +12,7 @@ import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
  * Time: 22:11<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface IBaseAsyncHttpTask {
+public interface AsyncHttpTask {
     /**
      * 异步 http 访问执行入口
      * @param request

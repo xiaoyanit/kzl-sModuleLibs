@@ -5,14 +5,14 @@ import android.content.Context;
 import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
-import com.kzl.lib.http.sample.http.base.IAsyncHttpResponseSuccessHandler;
+import com.kzl.lib.http.sample.http.base.AsyncHttpFlowResponseSuccessHandler;
 import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
-import com.kzl.lib.http.sample.http.base.async.IBaseAsyncHttpTask;
-import com.kzl.lib.http.sample.http.base.async.ImplAsyncHttpFlowHandler;
+import com.kzl.lib.http.sample.http.base.async.AsyncHttpTask;
+import com.kzl.lib.http.sample.http.base.async.AsyncHttpFlowFlowHandlerImpl;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
-import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
-import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
+import com.kzl.lib.http.task.interfaces.async.AsyncHttpTaskExcutor;
+import com.kzl.lib.http.task.interfaces.async.impl.AsyncHttpTaskExcutorImpl;
 
 /**
  * http 异步访问的基类,get、post等具体实现，都可以继承本类<br/>
@@ -24,17 +24,17 @@ import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplBaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpFlowHandler<T> implements IBaseAsyncHttpTask, IAsyncHttpResponseSuccessHandler<T> {
+public class AsyncHttpTaskImplBase<T extends BaseHttpResponse> extends AsyncHttpFlowFlowHandlerImpl<T> implements AsyncHttpTask, AsyncHttpFlowResponseSuccessHandler<T> {
     private Context context;
-    private IAsyncHttpTask iAsyncHttpTask;
+    private AsyncHttpTaskExcutor asyncHttpTaskExcutor;
 
-    public ImplBaseAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient) {
+    public AsyncHttpTaskImplBase(Context context, AsyncHttpClient asyncHttpClient) {
         this.context = context;
-        iAsyncHttpTask = new ImplAsyncHttpTask<T>(context, asyncHttpClient, this);
+        asyncHttpTaskExcutor = new AsyncHttpTaskExcutorImpl<T>(context, asyncHttpClient, this);
     }
 
     @Override
     public void execute(final BaseHttpRequest request) {
-        iAsyncHttpTask.execute(context, HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        asyncHttpTaskExcutor.execute(context, HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
     }
 }

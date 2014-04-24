@@ -14,8 +14,8 @@ import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplBasePostAsyncHttpTask<T extends BaseHttpResponse> extends ImplBaseAsyncHttpTask<T> {
-    public ImplBasePostAsyncHttpTask(Context context) {
+public class AsyncHttpTaskImplPost<T extends BaseHttpResponse> extends AsyncHttpTaskImplBase<T> {
+    public AsyncHttpTaskImplPost(Context context) {
         super(context, new AsyncHttpClientImplPost());
     }
 }

@@ -17,7 +17,7 @@ import com.kzl.lib.http.task.interfaces.GPConstantValues;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public interface ISyncHttpTask<T extends EmptyHttpResponse> {
+public interface SyncHttpTask<T extends EmptyHttpResponse> {
     final static String LOG_TAG = GPConstantValues.LOG_TAG;
 
     /**

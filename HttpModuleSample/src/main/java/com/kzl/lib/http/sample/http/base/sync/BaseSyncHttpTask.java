@@ -9,9 +9,9 @@ import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
 import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
 import com.kzl.lib.http.sample.module.BaseRequest;
 import com.kzl.lib.http.sample.module.BaseResponse;
-import com.kzl.lib.http.task.interfaces.sync.ISyncHttpTask;
-import com.kzl.lib.http.task.interfaces.sync.impl.GetImplSyncHttpTask;
-import com.kzl.lib.http.task.interfaces.sync.impl.PostImplSyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.SyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.impl.SyncHttpTaskImplGet;
+import com.kzl.lib.http.task.interfaces.sync.impl.SyncHttpTaskImplPost;
 
 /**
  * 应用 http 同步访问的基类，建议以组合的方式使用，不要继承<br/>
@@ -25,12 +25,12 @@ import com.kzl.lib.http.task.interfaces.sync.impl.PostImplSyncHttpTask;
  */
 public class BaseSyncHttpTask<T extends BaseResponse> {
     private static BaseSyncHttpTask instance;
-    private ISyncHttpTask<T> getSyncHttpTask;
-    private ISyncHttpTask<T> postSyncHttpTask;
+    private SyncHttpTask<T> getSyncHttpTask;
+    private SyncHttpTask<T> postSyncHttpTask;
 
     private BaseSyncHttpTask(Context context) {
-        getSyncHttpTask = new GetImplSyncHttpTask<T>(context);
-        postSyncHttpTask = new PostImplSyncHttpTask<T>(context);
+        getSyncHttpTask = new SyncHttpTaskImplGet<T>(context);
+        postSyncHttpTask = new SyncHttpTaskImplPost<T>(context);
     }
 
     public static BaseSyncHttpTask getInstance() {

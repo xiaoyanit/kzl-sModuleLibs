@@ -8,7 +8,7 @@ import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 import com.kzl.lib.http.client.interfaces.utils.HttpResponseMapper;
 import com.kzl.lib.http.client.utils.HttpCommonUtil;
-import com.kzl.lib.http.task.interfaces.sync.ISyncHttpTask;
+import com.kzl.lib.http.task.interfaces.sync.SyncHttpTask;
 import com.kzl.lib.http.task.interfaces.sync.SyncHttpExecutor;
 import com.kzl.lib.utils.LogUtil;
 /**
@@ -21,18 +21,18 @@ import com.kzl.lib.utils.LogUtil;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class BaseImplSyncHttpTask<T extends EmptyHttpResponse> implements ISyncHttpTask<T> {
+public class SyncHttpTaskImplBase<T extends EmptyHttpResponse> implements SyncHttpTask<T> {
     private SyncHttpClient syncHttpClient;
     private Context context;
 
-    public BaseImplSyncHttpTask(Context context, SyncHttpClient syncHttpClient) {
+    public SyncHttpTaskImplBase(Context context, SyncHttpClient syncHttpClient) {
         this.syncHttpClient = syncHttpClient;
         this.context = context;
     }
 
     @Override
     public T execute(final EmptyHttpRequest request, final String url, final HttpResponseMapper mapper, final HttpResponseFilter filter) {
-        LogUtil.trace(LOG_TAG, "BaseImplSyncHttpTask");
+        LogUtil.trace(LOG_TAG, "SyncHttpTaskImplBase");
         return new SyncHttpExecutor() {
             @Override
             public T execute() {

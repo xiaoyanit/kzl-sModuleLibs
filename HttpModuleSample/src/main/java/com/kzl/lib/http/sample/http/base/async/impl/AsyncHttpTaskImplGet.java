@@ -14,8 +14,8 @@ import com.kzl.lib.http.sample.module.BaseResponse;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplBaseGetAsyncHttpTask<T extends BaseResponse> extends ImplBaseAsyncHttpTask<T> {
-    public ImplBaseGetAsyncHttpTask(Context context) {
+public class AsyncHttpTaskImplGet<T extends BaseResponse> extends AsyncHttpTaskImplBase<T> {
+    public AsyncHttpTaskImplGet(Context context) {
         super(context, new AsyncHttpClientImplGet());
     }
 }
