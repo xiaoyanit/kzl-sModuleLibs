@@ -56,10 +56,6 @@ public class HttpCommonUtil {
      * @return
      */
     public static <T extends EmptyHttpResponse> T onFinish(String  responseString, final Class<T> classOfT, final IHttpResponseHandler<T> handler, final IHttpResponseFilter filter) {
-        if (responseString == null) {
-            LogUtil.trace(LOG_TAG, "connect fail onPostExecute");
-            return null;
-        }
         LogUtil.trace(LOG_TAG, "json-response:" + responseString);
         T responseEntity = null;
         try {
@@ -69,12 +65,15 @@ public class HttpCommonUtil {
             LogUtil.trace(e);
         } catch (JsonParseException e) {
             LogUtil.trace(e);
-        } finally {
+        } catch (NullPointerException e){
+            LogUtil.trace(e);
+        }catch (Exception e){
+            LogUtil.trace(e);
+        }finally {
             if (handler != null) {
                 handler.onFinish(responseEntity);
             }
-            return responseEntity;
-
         }
+        return responseEntity;
     }
 }

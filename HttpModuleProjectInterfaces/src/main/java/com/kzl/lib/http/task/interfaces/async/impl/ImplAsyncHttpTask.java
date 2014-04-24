@@ -2,7 +2,7 @@ package com.kzl.lib.http.task.interfaces.async.impl;
 
 import android.content.Context;
 import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
-import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.AsyncHttpFlowHandler;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseFilter;
 import com.kzl.lib.http.client.interfaces.callback.IHttpResponseHandler;
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpRequest;
@@ -29,13 +29,13 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
     private final static String LOG_TAG = GPConstantValues.LOG_TAG;
     protected Context context;
     private AsyncHttpClient asyncHttpClient;
-    private IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler;
+    private AsyncHttpFlowHandler<T> asyncHttpFlowHandler;
     private long start;
 
-    public ImplAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient, IAsyncHttpResponseHandler<T> iAsyncHttpResponseHandler) {
+    public ImplAsyncHttpTask(Context context, AsyncHttpClient asyncHttpClient, AsyncHttpFlowHandler<T> asyncHttpFlowHandler) {
         this.context = context;
         this.asyncHttpClient = asyncHttpClient;
-        this.iAsyncHttpResponseHandler = iAsyncHttpResponseHandler;
+        this.asyncHttpFlowHandler = asyncHttpFlowHandler;
     }
 
     /**
@@ -48,11 +48,11 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
             long end = System.currentTimeMillis();
             LogUtil.trace(LOG_TAG + "  start-end ==" + (end - start));
             if (response == null) {
-                iAsyncHttpResponseHandler.onNoData();
+                asyncHttpFlowHandler.onNoData();
             } else {
-                iAsyncHttpResponseHandler.onSuccess(response);
+                asyncHttpFlowHandler.onSuccess(response);
             }
-            iAsyncHttpResponseHandler.onFinish();
+            asyncHttpFlowHandler.onFinish();
         }
     };
 
@@ -67,10 +67,10 @@ public class ImplAsyncHttpTask<T extends EmptyHttpResponse> implements IAsyncHtt
         LogUtil.trace(LOG_TAG, "json-request async:" + url);
         LogUtil.trace(LOG_TAG, "request-actionCode:" + request.getActionCode());
         if (!Utils.isNetWorkAvailable(context)) {
-            iAsyncHttpResponseHandler.onNoNet();
+            asyncHttpFlowHandler.onNoNet();
             return;
         }
-        iAsyncHttpResponseHandler.onStart();
+        asyncHttpFlowHandler.onStart();
         start = System.currentTimeMillis();
         executor.execute();
     }

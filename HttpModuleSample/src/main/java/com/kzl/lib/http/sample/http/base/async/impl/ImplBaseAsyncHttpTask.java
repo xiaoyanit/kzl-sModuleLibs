@@ -8,7 +8,7 @@ import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
 import com.kzl.lib.http.sample.http.base.IAsyncHttpResponseSuccessHandler;
 import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
 import com.kzl.lib.http.sample.http.base.async.IBaseAsyncHttpTask;
-import com.kzl.lib.http.sample.http.base.async.ImplAsyncHttpResponseHandler;
+import com.kzl.lib.http.sample.http.base.async.ImplAsyncHttpFlowHandler;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
 import com.kzl.lib.http.task.interfaces.BaseHttpResponse;
 import com.kzl.lib.http.task.interfaces.async.IAsyncHttpTask;
@@ -24,7 +24,7 @@ import com.kzl.lib.http.task.interfaces.async.impl.ImplAsyncHttpTask;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplBaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpResponseHandler<T> implements IBaseAsyncHttpTask, IAsyncHttpResponseSuccessHandler<T> {
+public class ImplBaseAsyncHttpTask<T extends BaseHttpResponse> extends ImplAsyncHttpFlowHandler<T> implements IBaseAsyncHttpTask, IAsyncHttpResponseSuccessHandler<T> {
     private Context context;
     private IAsyncHttpTask iAsyncHttpTask;
 

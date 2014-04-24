@@ -1,6 +1,6 @@
 package com.kzl.lib.http.sample.http.base.async;
 
-import com.kzl.lib.http.client.interfaces.callback.IAsyncHttpResponseHandler;
+import com.kzl.lib.http.client.interfaces.callback.AsyncHttpFlowHandler;
 import com.kzl.lib.http.sample.R;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.IAsyncHttpResponseSuccessHandler;
@@ -18,7 +18,7 @@ import com.kzl.lib.utils.ToastUtil;
  * Time: 21:25<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplAsyncHttpResponseHandler<T extends BaseHttpResponse> implements IAsyncHttpResponseHandler<T>, IAsyncHttpResponseSuccessHandler<T> {
+public class ImplAsyncHttpFlowHandler<T extends BaseHttpResponse> implements AsyncHttpFlowHandler<T>, IAsyncHttpResponseSuccessHandler<T> {
 
     @Override
     public void onSuccess(T response) {
