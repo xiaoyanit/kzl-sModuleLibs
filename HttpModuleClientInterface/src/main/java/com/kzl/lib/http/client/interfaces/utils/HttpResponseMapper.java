@@ -2,9 +2,6 @@ package com.kzl.lib.http.client.interfaces.utils;
 
 import com.kzl.lib.http.client.interfaces.model.EmptyHttpResponse;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * ActionCode Response 映射类抽象类<br/>
  * Project:LuLuModuleLibs<br/>
@@ -16,30 +13,12 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class HttpResponseMapper {
-//    /**
-//     * 子类可以重写CLASS_MAP修改里面的值类型为其具体抽象类类型，但，此时，会丢失父类初始化的数据，*
-//     */
-//    protected final static Map<String, Class<? extends EmptyHttpResponse>> CLASS_MAP = new HashMap<String, Class<? extends EmptyHttpResponse>>();
-
-//    static {
-//        if (LogUtil.isDebug) {
-//            CLASS_MAP.put("g", EmptyHttpResponse.class);
-//        }
-//    }
-
     /**
-     * 根据actionCode，找到响应类
-     * 如果没有找到key对应的类型，则返回null，子类可以根据自身需求返回具体抽象类型
+     * to find the class type which extends EmptyHttpResponse by the actionCode
      *
      * @param actionCode
      * @param <T>
      * @return
      */
     public abstract <T extends EmptyHttpResponse> Class<T> findClass(String actionCode);
-//    {
-//        Class c = CLASS_MAP.get(actionCode);
-////        if (c == null)
-////            c = EmptyHttpResponse.class;
-//        return c;
-//    }
 }
