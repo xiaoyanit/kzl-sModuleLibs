@@ -6,7 +6,7 @@ import com.kzl.lib.http.client.interfaces.AsyncHttpClient;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
 import com.kzl.lib.http.sample.http.base.AsyncHttpFlowResponseSuccessHandler;
-import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
+import com.kzl.lib.http.sample.http.base.HttpResponseFilterImpl;
 import com.kzl.lib.http.sample.http.base.async.AsyncHttpTask;
 import com.kzl.lib.http.sample.http.base.async.AsyncHttpFlowFlowHandlerImpl;
 import com.kzl.lib.http.task.interfaces.BaseHttpRequest;
@@ -35,6 +35,6 @@ public class AsyncHttpTaskImplBase<T extends BaseHttpResponse> extends AsyncHttp
 
     @Override
     public void execute(final BaseHttpRequest request) {
-        asyncHttpTaskExcutor.execute(context, HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        asyncHttpTaskExcutor.execute(context, HttpCommonUtils.getRequestUrl(request), request, GpConstantsActionCode.getInstance(), HttpResponseFilterImpl.getInstance());
     }
 }

@@ -6,7 +6,7 @@ import android.content.Context;
 import com.kzl.lib.http.sample.APP;
 import com.kzl.lib.http.sample.http.GpConstantsActionCode;
 import com.kzl.lib.http.sample.http.base.HttpCommonUtils;
-import com.kzl.lib.http.sample.http.base.ImplHttpResponseFilter;
+import com.kzl.lib.http.sample.http.base.HttpResponseFilterImpl;
 import com.kzl.lib.http.sample.module.BaseRequest;
 import com.kzl.lib.http.sample.module.BaseResponse;
 import com.kzl.lib.http.task.interfaces.sync.SyncHttpTask;
@@ -46,7 +46,7 @@ public class BaseSyncHttpTask<T extends BaseResponse> {
      * @return
      */
     public T get(BaseRequest request) {
-        return getSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        return getSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), HttpResponseFilterImpl.getInstance());
     }
 
     /**
@@ -55,6 +55,6 @@ public class BaseSyncHttpTask<T extends BaseResponse> {
      * @return
      */
     public T post(BaseRequest request) {
-        return postSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), ImplHttpResponseFilter.getInstance());
+        return postSyncHttpTask.execute(request, HttpCommonUtils.getRequestUrl(request), GpConstantsActionCode.getInstance(), HttpResponseFilterImpl.getInstance());
     }
 }

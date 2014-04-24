@@ -13,13 +13,13 @@ import com.kzl.lib.http.client.interfaces.callback.HttpResponseFilter;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public class ImplHttpResponseFilter implements HttpResponseFilter {
+public class HttpResponseFilterImpl implements HttpResponseFilter {
 
-    private static ImplHttpResponseFilter instance;
+    private static HttpResponseFilterImpl instance;
 
-    public static ImplHttpResponseFilter getInstance() {
+    public static HttpResponseFilterImpl getInstance() {
         if (instance == null) {
-            instance = new ImplHttpResponseFilter();
+            instance = new HttpResponseFilterImpl();
         }
         return instance;
     }
