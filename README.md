@@ -35,13 +35,13 @@ kzl-sModuleLibs
 本人实力有限，如有不对或者疏漏的地方，欢迎指正。
 
 附上一些使用以及借鉴的开源网址
-https://github.com/Trinea/android-common
-https://github.com/litesuits/android-lite-http
-https://github.com/davidleen/android-BaseAdapter-enhance
-如有遗漏，还请指出，谢谢！
+https://github.com/Trinea/android-common </br>
+https://github.com/litesuits/android-lite-http </br>
+https://github.com/davidleen/android-BaseAdapter-enhance </br>
+如有遗漏，还请指出，谢谢！ \n
 
 
-转载请注明出处https://github.com/zouzhenglu/kzl-sModuleLibs
+转载请注明出处https://github.com/zouzhenglu/kzl-sModuleLibs </br>
 
 <a href="kezhenlu@qq.com">kezhenlu@qq.com</a>
 
