@@ -38,7 +38,7 @@ kzl-sModuleLibs
 https://github.com/Trinea/android-common </br>
 https://github.com/litesuits/android-lite-http </br>
 https://github.com/davidleen/android-BaseAdapter-enhance </br>
-如有遗漏，还请指出，谢谢！ \n
+如有遗漏，还请指出，谢谢！</br>
 
 
 转载请注明出处https://github.com/zouzhenglu/kzl-sModuleLibs </br>
