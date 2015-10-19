@@ -18,74 +18,38 @@ import java.util.List;
  * Time: 17:32<br/>
  * To change this template use File | Settings | File Templates.
  */
-public abstract class AbstractAdapter<D> extends BaseAdapter {
+public abstract class AbstractAdapter<T> extends BaseAdapter {
 
     protected Context context;
-    protected String TAG;
+    protected String TAG = this.getClass().getName();
     protected LayoutInflater inflater;
-    private List<D> list;
+    private List<T> list;
 
     public AbstractAdapter(Context context) {
         this(context, null);
     }
 
     /**
-     * constructor
+     * set the list Arrays and notify update
      *
-     * @param context
-     * @param list
+     * @param arrayData
      */
-    public AbstractAdapter(Context context, List<D> list) {
+    public void setDataArray(List<T> arrayData) {
+        list.clear();
+        if (arrayData != null) {
+            list.addAll(arrayData);
+        }
+        syncNotifyDataSetChanged();
+    }
 
+    public AbstractAdapter(Context context, List<T> list) {
         this.context = context;
-        TAG = this.getClass().getName();
         if (list == null) {
-            this.list = new ArrayList<D>();
+            this.list = new ArrayList<T>();
         } else {
             this.list = list;
         }
-        inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    }
-
-
-    /**
-     * set the list Arrays and notify update
-     *
-     * @param list
-     */
-    public void refreshData(List<D> list) {
-        this.list.clear();
-        if (list != null) {
-            this.list.addAll(list);
-        }
-        notifyDataSetChanged();
-    }
-
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        int type = getItemViewType(position);
-
-        BaseViewHolder<D> holder;
-        if (convertView == null) {
-            convertView = View.inflate(context, getItemViewLayout(type), null);
-            holder = getItemViewHolder(type);
-            convertView.setTag(holder);
-        } else {
-            holder = (BaseViewHolder<D>) convertView.getTag();
-        }
-        ViewInjectorByReflect.injectView(holder, convertView);
-        D bean = getItem(position);
-
-        holder.setData(bean, position);
-        return convertView;
-
-    }
-
-    protected Context getContext() {
-        return context;
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -94,7 +58,9 @@ public abstract class AbstractAdapter<D> extends BaseAdapter {
     }
 
     @Override
-    public D getItem(int position) {
+    public T getItem(int position) {
+        if (list == null || list.size() == 0 || position >= list.size())
+            return null;
         return list.get(position);
     }
 
@@ -103,9 +69,14 @@ public abstract class AbstractAdapter<D> extends BaseAdapter {
         return position;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        //override if is multi type layout
+        return super.getItemViewType(position);
+    }
 
     /**
-     * get the itemlayout base on viewType;
+     * get the item layout base on viewType;
      * 获取对应itemType 的布局文件
      *
      * @param itemViewType
@@ -120,5 +91,67 @@ public abstract class AbstractAdapter<D> extends BaseAdapter {
      * @param itemViewType
      * @return
      */
-    protected abstract BaseViewHolder<D> getItemViewHolder(int itemViewType);
+    protected abstract BaseViewHolder<T> getItemViewHolder(int itemViewType);
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        int type = getItemViewType(position);
+
+        View currentFocus = ((Activity) context).getCurrentFocus();
+        if (currentFocus != null) {
+            currentFocus.clearFocus();
+        }
+        BaseViewHolder<T> holder;
+        if (convertView == null) {
+            convertView = View.inflate(context, getItemViewLayout(type), null);
+            holder = getItemViewHolder(type);
+            ViewInjectorByReflect.injectView(holder, convertView);
+            holder.setFixedData();
+            convertView.setTag(holder);
+        } else {
+            holder = (BaseViewHolder<T>) convertView.getTag();
+        }
+        T data = getItem(position);
+
+        holder.setData(data, position);
+        return convertView;
+
+    }
+
+    /**
+     * a bindable interface with a setData method
+     * 数据绑定类 包含绑定的控件成员 绑定方法。
+     *
+     * @param <D>
+     * @author davidleen29
+     * @创建时间 2013年11月13日
+     */
+    public abstract class BaseViewHolder<D> implements UnMixable {
+        /**
+         * bind the data message,execute every time when getItem
+         *
+         * @param data     the data params
+         * @param position the position of data in the datasArray
+         */
+        public abstract void setData(D data, int position);
+
+        /**
+         * bind the fixed data or listeners,just execute when you new a view holder
+         */
+        public void setFixedData() {
+        }
+
+    }
+
+    protected Context getContext() {
+        return context;
+    }
+
+    /**
+     * 统一去通知数据集已更新
+     */
+    public synchronized void syncNotifyDataSetChanged() {
+        notifyDataSetChanged();
+    }
 }
+
